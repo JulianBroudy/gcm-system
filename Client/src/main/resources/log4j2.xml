@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration state="INFO">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %-25.25t - %-22C{0} - %msg %n%throwable"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+
+    <Logger name="entity.guice.EnhancedFXMLLoaderDependenciesModule" additivity="false"
+      level="TRACE"/>
+    <Logger name="boundary.fxmlControllers.ClientInitializingController" additivity="false"/>
+
+
+    <Root level="trace">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>

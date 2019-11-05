@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0"
+  prefWidth="250.0" spacing="2.0" styleClass="background-switcheroo-side-pane"
+  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.customer.CustomerSidePaneController">
+  <children>
+    <BorderPane prefHeight="100.0" VBox.vgrow="NEVER">
+      <center>
+        <ImageView fitHeight="117.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true"
+          BorderPane.alignment="CENTER">
+          <image>
+            <Image url="@../../images/GCMLogo.png"/>
+          </image>
+          <effect>
+            <DropShadow blurType="GAUSSIAN" height="33.08" offsetX="4.0" offsetY="3.0"
+              radius="13.71" spread="0.27" width="23.76"/>
+          </effect>
+        </ImageView>
+      </center>
+    </BorderPane>
+    <Region maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="50.0"
+      prefWidth="200.0" VBox.vgrow="NEVER"/>
+    <HBox alignment="CENTER" maxHeight="60.0" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+      <children>
+        <JFXButton fx:id="myAccountBTN" graphicTextGap="15.0" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" ripplerFill="#7a63be" text="My Account"
+          textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+          <opaqueInsets>
+            <Insets/>
+          </opaqueInsets>
+          <styleClass>
+            <String fx:value="label-20"/>
+            <String fx:value="button-sidePane"/>
+          </styleClass>
+          <HBox.margin>
+            <Insets/>
+          </HBox.margin>
+          <graphic>
+            <FontAwesomeIconView glyphName="USER_CIRCLE" size="30" stroke="#403264"/>
+          </graphic>
+        </JFXButton>
+      </children>
+      <VBox.margin>
+        <Insets top="20.0"/>
+      </VBox.margin>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="10.0" layoutY="185.0" maxHeight="60.0"
+      maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+      <children>
+        <JFXButton fx:id="catalogBrowsingBTN" graphicTextGap="15.0"
+          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" ripplerFill="#7a63be"
+          text="Catalog Browsing" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+          <opaqueInsets>
+            <Insets/>
+          </opaqueInsets>
+          <styleClass>
+            <String fx:value="label-20"/>
+            <String fx:value="button-sidePane"/>
+          </styleClass>
+          <HBox.margin>
+            <Insets/>
+          </HBox.margin>
+          <graphic>
+            <EmojiOneView glyphName="MAP" size="30" stroke="#403264"/>
+          </graphic>
+        </JFXButton>
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="10.0" layoutY="241.0" maxHeight="60.0"
+      maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+      <children>
+        <JFXButton fx:id="activeSubscriptionsBTN" graphicTextGap="15.0"
+          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" ripplerFill="#7a63be"
+          style="-fx-font-size: 19;" styleClass="button-sidePane" text="Active Subscriptions"
+          textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+          <opaqueInsets>
+            <Insets/>
+          </opaqueInsets>
+          <graphic>
+            <FontAwesomeIconView glyphName="CALENDAR_CHECK_ALT" stroke="#403264"/>
+          </graphic>
+          <HBox.margin>
+            <Insets/>
+          </HBox.margin>
+        </JFXButton>
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="10.0" layoutY="297.0" maxHeight="60.0"
+      maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+      <children>
+        <JFXButton fx:id="purchaseHistoryBTN" graphicTextGap="15.0"
+          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" ripplerFill="#7a63be"
+          text="Purchase History" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+          <opaqueInsets>
+            <Insets/>
+          </opaqueInsets>
+          <styleClass>
+            <String fx:value="label-20"/>
+            <String fx:value="button-sidePane"/>
+          </styleClass>
+          <graphic>
+            <EmojiOneView glyphName="SHOPPING_CART" stroke="#403264"/>
+          </graphic>
+        </JFXButton>
+      </children>
+    </HBox>
+    <Region maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+      VBox.vgrow="ALWAYS"/>
+    <HBox alignment="CENTER" layoutX="10.0" layoutY="465.0" maxHeight="52.0"
+      maxWidth="1.7976931348623157E308" styleClass="menu-option" VBox.vgrow="ALWAYS">
+      <children>
+        <JFXButton fx:id="helpBTN" graphicTextGap="20.0" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" ripplerFill="#7a63be" text="Help" textAlignment="CENTER"
+          HBox.hgrow="ALWAYS">
+          <styleClass>
+            <String fx:value="button-sidePane"/>
+            <String fx:value="label-18"/>
+          </styleClass>
+          <graphic>
+            <MaterialIconView fill="#403264" glyphName="LIVE_HELP" size="30" stroke="#403264">
+              <LinearGradient endX="1.0" endY="1.0" startX="0.62931034744361"
+                startY="0.04310347686954441">
+                <stops>
+                  <Stop color="#403264"/>
+                  <Stop color="WHITE" offset="1.0"/>
+                </stops>
+              </LinearGradient>
+            </MaterialIconView>
+          </graphic>
+          <opaqueInsets>
+            <Insets/>
+          </opaqueInsets>
+        </JFXButton>
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="10.0" layoutY="410.0" maxHeight="52.0"
+      maxWidth="1.7976931348623157E308" styleClass="menu-option" VBox.vgrow="ALWAYS">
+      <children>
+        <JFXButton fx:id="donateBTN" graphicTextGap="20.0" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" ripplerFill="#7a63be" text="Donate"
+          textAlignment="CENTER" HBox.hgrow="ALWAYS">
+          <styleClass>
+            <String fx:value="button-sidePane"/>
+            <String fx:value="label-18"/>
+          </styleClass>
+          <graphic>
+            <EmojiOneView fill="#403264" glyphName="MONEYBAG" size="30" smooth="false"
+              stroke="#403264"/>
+          </graphic>
+          <HBox.margin>
+            <Insets/>
+          </HBox.margin>
+          <opaqueInsets>
+            <Insets/>
+          </opaqueInsets>
+        </JFXButton>
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="10.0" layoutY="490.0" maxHeight="52.0"
+      maxWidth="1.7976931348623157E308" styleClass="menu-option" VBox.vgrow="ALWAYS">
+      <children>
+        <JFXButton fx:id="contactUsBTN" graphicTextGap="20.0" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" ripplerFill="#7a63be" text="Contact Us"
+          textAlignment="CENTER" HBox.hgrow="ALWAYS">
+          <styleClass>
+            <String fx:value="button-sidePane"/>
+            <String fx:value="label-18"/>
+          </styleClass>
+          <graphic>
+            <FontAwesomeIconView fill="#403264" glyphName="SUPPORT" size="30" stroke="#403264"/>
+          </graphic>
+          <opaqueInsets>
+            <Insets/>
+          </opaqueInsets>
+        </JFXButton>
+      </children>
+    </HBox>
+    <Region maxHeight="40.0" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS"/>
+    <HBox alignment="CENTER" layoutX="10.0" layoutY="297.0" maxHeight="80.0"
+      maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+      <children>
+        <JFXButton fx:id="logOutBTN" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="20.0"
+          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" ripplerFill="#5999d9"
+          style="-fx-alignment: CENTER;" text="Log Out" textAlignment="CENTER" wrapText="true"
+          HBox.hgrow="ALWAYS">
+          <opaqueInsets>
+            <Insets/>
+          </opaqueInsets>
+          <styleClass>
+            <String fx:value="label-22"/>
+            <String fx:value="button-sidePane"/>
+            <String fx:value="button-sidePane-red-hover"/>
+          </styleClass>
+          <graphic>
+            <OctIconView glyphName="SIGN_OUT"/>
+          </graphic>
+
+        </JFXButton>
+      </children>
+      <VBox.margin>
+        <Insets/>
+      </VBox.margin>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@../../css/DefaultStyleSheet.css"/>
+  </stylesheets>
+</VBox>

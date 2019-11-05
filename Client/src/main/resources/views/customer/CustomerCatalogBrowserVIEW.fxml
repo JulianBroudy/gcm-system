@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+<AnchorPane prefHeight="700.0" prefWidth="1150.0" stylesheets="@../../css/DefaultStyleSheet.css"
+  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.customer.CustomerCatalogBrowserController">
+  <children>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1150.0" spacing="20.0"
+      AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+      AnchorPane.topAnchor="0.0">
+      <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+      </padding>
+      <children>
+        <HBox styleClass="container-line-purple-light" HBox.hgrow="NEVER">
+          <children>
+            <JFXComboBox fx:id="searchByCB" labelFloat="true" maxHeight="1.7976931348623157E308"
+              maxWidth="200.0" minWidth="200.0" promptText="Search By:" unFocusColor="WHITE">
+              <styleClass>
+                <String fx:value="jfx-combo-box-text-black-purple"/>
+                <String fx:value="label-20"/>
+              </styleClass>
+            </JFXComboBox>
+          </children>
+        </HBox>
+        <CustomTextField fx:id="searchCTF" maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+          <styleClass>
+            <String fx:value="jfx-combo-box-focus-purple"/>
+            <String fx:value="text-field-text-black"/>
+            <String fx:value="jfx-text-field"/>
+            <String fx:value="label-18"/>
+          </styleClass>
+        </CustomTextField>
+      </children>
+    </HBox>
+    <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER"
+      styleClass="scroll-pane-purple" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <content>
+        <TilePane fx:id="citiesTP" alignment="TOP_CENTER" hgap="25.0" prefColumns="3" prefRows="1"
+          prefTileHeight="560.0" prefTileWidth="340.0" tileAlignment="TOP_CENTER" vgap="30.0">
+          <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+          </padding>
+          <children>
+            <VBox alignment="TOP_CENTER" maxHeight="550.0" maxWidth="340.0" prefHeight="550.0"
+              prefWidth="340.0" spacing="10.0" styleClass="tile-leftmost-background"
+              TilePane.alignment="CENTER">
+              <children>
+                <Label text="City Name" wrapText="true">
+                  <styleClass>
+                    <String fx:value="label-city-preview-title"/>
+                    <String fx:value="label-26"/>
+                  </styleClass>
+                  <VBox.margin>
+                    <Insets/>
+                  </VBox.margin>
+                </Label>
+                <Region layoutX="40.0" layoutY="324.0" maxHeight="30.0" VBox.vgrow="ALWAYS"/>
+                <VBox spacing="10.0" VBox.vgrow="NEVER">
+                  <children>
+                    <Label text="Release Date: ##/##/####"/>
+                    <Label layoutX="60.0" layoutY="10.0" text="Number of Maps: ##"/>
+                    <Label layoutX="60.0" layoutY="25.0" text="Number of Sites: ##"/>
+                    <Label layoutX="60.0" layoutY="41.0"
+                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae felis molestie odio dapibus dignissim sed id dolor. Donec aliquam."
+                      wrapText="true"/>
+                  </children>
+                  <VBox.margin>
+                    <Insets left="20.0" right="20.0"/>
+                  </VBox.margin>
+                  <styleClass>
+                    <String fx:value="label-18"/>
+                    <String fx:value="label-text-white"/>
+                  </styleClass>
+                </VBox>
+                <Region maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS"/>
+                <JFXButton maxWidth="1.7976931348623157E308" ripplerFill="WHITE"
+                  styleClass="button-city-preview" text="Subscribe" VBox.vgrow="ALWAYS"/>
+                <JFXButton layoutX="40.0" layoutY="341.0" maxWidth="1.7976931348623157E308"
+                  styleClass="experimental-button9" text="One Time Download">
+                  <ripplerFill>
+                    <LinearGradient endX="1.0" endY="1.0">
+                      <stops>
+                        <Stop color="WHITE"/>
+                        <Stop color="WHITE" offset="1.0"/>
+                      </stops>
+                    </LinearGradient>
+                  </ripplerFill>
+                </JFXButton>
+              </children>
+              <TilePane.margin>
+                <Insets/>
+              </TilePane.margin>
+              <padding>
+                <Insets bottom="50.0" left="30.0" right="30.0" top="50.0"/>
+              </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="394.0" layoutY="30.0" maxHeight="550.0"
+              prefHeight="550.0" prefWidth="340.0" spacing="10.0"
+              styleClass="tile-middle-background">
+              <children>
+                <Label text="City Name" wrapText="true">
+                  <styleClass>
+                    <String fx:value="label-city-preview-title"/>
+                    <String fx:value="label-26"/>
+                  </styleClass>
+                  <VBox.margin>
+                    <Insets/>
+                  </VBox.margin>
+                </Label>
+                <Region layoutX="40.0" layoutY="324.0" maxHeight="30.0" VBox.vgrow="ALWAYS"/>
+                <VBox spacing="10.0" VBox.vgrow="NEVER">
+                  <children>
+                    <Label text="Release Date: ##/##/####"/>
+                    <Label layoutX="60.0" layoutY="10.0" text="Number of Maps: ##"/>
+                    <Label layoutX="60.0" layoutY="25.0" text="Number of Sites: ##"/>
+                    <Label layoutX="60.0" layoutY="41.0"
+                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae felis molestie odio dapibus dignissim sed id dolor. Donec aliquam."
+                      wrapText="true"/>
+                  </children>
+                  <VBox.margin>
+                    <Insets left="20.0" right="20.0"/>
+                  </VBox.margin>
+                  <styleClass>
+                    <String fx:value="label-18"/>
+                    <String fx:value="label-text-white"/>
+                  </styleClass>
+                </VBox>
+                <Region maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS"/>
+                <VBox spacing="10.0" VBox.vgrow="NEVER">
+                  <children>
+                    <JFXButton maxWidth="1.7976931348623157E308" ripplerFill="WHITE"
+                      styleClass="experimental-button10" text="Extend Subscription"
+                      VBox.vgrow="ALWAYS"/>
+                    <HBox VBox.vgrow="ALWAYS">
+                      <children>
+                        <JFXButton maxWidth="1.7976931348623157E308" text="Download"
+                          HBox.hgrow="ALWAYS">
+                          <ripplerFill>
+                            <LinearGradient endX="1.0" endY="1.0">
+                              <stops>
+                                <Stop color="WHITE"/>
+                                <Stop color="WHITE" offset="1.0"/>
+                              </stops>
+                            </LinearGradient>
+                          </ripplerFill>
+                          <styleClass>
+                            <String fx:value="button-city-preview"/>
+                            <String fx:value="button-city-preview-download"/>
+                          </styleClass>
+                        </JFXButton>
+                        <JFXButton layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308"
+                          styleClass="button-city-preview" text="View" HBox.hgrow="ALWAYS">
+                          <ripplerFill>
+                            <LinearGradient endX="1.0" endY="1.0">
+                              <stops>
+                                <Stop color="WHITE"/>
+                                <Stop color="WHITE" offset="1.0"/>
+                              </stops>
+                            </LinearGradient>
+                          </ripplerFill>
+                        </JFXButton>
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+              </children>
+              <padding>
+                <Insets bottom="50.0" left="30.0" right="30.0" top="50.0"/>
+              </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="564.0" layoutY="30.0" maxHeight="550.0"
+              prefHeight="550.0" prefWidth="340.0" spacing="10.0"
+              styleClass="tile-rightmost-background">
+              <children>
+                <Label text="City Name" wrapText="true">
+                  <styleClass>
+                    <String fx:value="label-city-preview-title"/>
+                    <String fx:value="label-26"/>
+                  </styleClass>
+                  <VBox.margin>
+                    <Insets/>
+                  </VBox.margin>
+                </Label>
+                <Region layoutX="40.0" layoutY="324.0" maxHeight="30.0" VBox.vgrow="ALWAYS"/>
+                <VBox spacing="10.0" VBox.vgrow="NEVER">
+                  <children>
+                    <Label text="Release Date: ##/##/####"/>
+                    <Label layoutX="60.0" layoutY="10.0" text="Number of Maps: ##"/>
+                    <Label layoutX="60.0" layoutY="25.0" text="Number of Sites: ##"/>
+                    <Label layoutX="60.0" layoutY="41.0"
+                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae felis molestie odio dapibus dignissim sed id dolor. Donec aliquam."
+                      wrapText="true"/>
+                  </children>
+                  <VBox.margin>
+                    <Insets left="20.0" right="20.0"/>
+                  </VBox.margin>
+                  <styleClass>
+                    <String fx:value="label-18"/>
+                    <String fx:value="label-text-white"/>
+                  </styleClass>
+                </VBox>
+                <Region maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS"/>
+                <JFXButton maxWidth="1.7976931348623157E308" ripplerFill="WHITE"
+                  styleClass="experimental-button10" text="Subscribe" VBox.vgrow="ALWAYS"/>
+                <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="341.0"
+                  maxWidth="1.7976931348623157E308" styleClass="experimental-button9"
+                  text="One Time Download">
+                  <ripplerFill>
+                    <LinearGradient endX="1.0" endY="1.0">
+                      <stops>
+                        <Stop color="WHITE"/>
+                        <Stop color="WHITE" offset="1.0"/>
+                      </stops>
+                    </LinearGradient>
+                  </ripplerFill>
+                </JFXButton>
+              </children>
+              <padding>
+                <Insets bottom="50.0" left="30.0" right="30.0" top="50.0"/>
+              </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="403.0" layoutY="30.0" maxHeight="550.0"
+              prefHeight="550.0" prefWidth="340.0" spacing="10.0"
+              styleClass="tile-middle-background">
+              <children>
+                <Label text="City Name" wrapText="true">
+                  <styleClass>
+                    <String fx:value="label-city-preview-title"/>
+                    <String fx:value="label-26"/>
+                  </styleClass>
+                  <VBox.margin>
+                    <Insets/>
+                  </VBox.margin>
+                </Label>
+                <Region layoutX="40.0" layoutY="324.0" maxHeight="30.0" VBox.vgrow="ALWAYS"/>
+                <VBox spacing="10.0" VBox.vgrow="NEVER">
+                  <children>
+                    <Label text="Release Date: ##/##/####"/>
+                    <Label layoutX="60.0" layoutY="10.0" text="Number of Maps: ##"/>
+                    <Label layoutX="60.0" layoutY="25.0" text="Number of Sites: ##"/>
+                    <Label layoutX="60.0" layoutY="41.0"
+                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae felis molestie odio dapibus dignissim sed id dolor. Donec aliquam."
+                      wrapText="true"/>
+                  </children>
+                  <VBox.margin>
+                    <Insets left="20.0" right="20.0"/>
+                  </VBox.margin>
+                  <styleClass>
+                    <String fx:value="label-18"/>
+                    <String fx:value="label-text-white"/>
+                  </styleClass>
+                </VBox>
+                <Region maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS"/>
+                <VBox spacing="10.0" VBox.vgrow="NEVER">
+                  <children>
+                    <JFXButton maxWidth="1.7976931348623157E308" ripplerFill="WHITE"
+                      styleClass="experimental-button10" text="Extend Subscription"
+                      VBox.vgrow="ALWAYS"/>
+                    <HBox VBox.vgrow="ALWAYS">
+                      <children>
+                        <JFXButton maxWidth="1.7976931348623157E308" text="Download"
+                          HBox.hgrow="ALWAYS">
+                          <ripplerFill>
+                            <LinearGradient endX="1.0" endY="1.0">
+                              <stops>
+                                <Stop color="WHITE"/>
+                                <Stop color="WHITE" offset="1.0"/>
+                              </stops>
+                            </LinearGradient>
+                          </ripplerFill>
+                          <styleClass>
+                            <String fx:value="button-city-preview"/>
+                            <String fx:value="button-city-preview-download"/>
+                          </styleClass>
+                        </JFXButton>
+                        <JFXButton layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308"
+                          styleClass="button-city-preview" text="View" HBox.hgrow="ALWAYS">
+                          <ripplerFill>
+                            <LinearGradient endX="1.0" endY="1.0">
+                              <stops>
+                                <Stop color="WHITE"/>
+                                <Stop color="WHITE" offset="1.0"/>
+                              </stops>
+                            </LinearGradient>
+                          </ripplerFill>
+                        </JFXButton>
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+              </children>
+              <padding>
+                <Insets bottom="50.0" left="30.0" right="30.0" top="50.0"/>
+              </padding>
+            </VBox>
+          </children>
+        </TilePane>
+      </content>
+    </ScrollPane>
+  </children>
+</AnchorPane>

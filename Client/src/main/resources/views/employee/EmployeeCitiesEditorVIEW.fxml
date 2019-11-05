@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane prefHeight="700.0" prefWidth="1150.0" stylesheets="@../../css/DefaultStyleSheet.css"
+  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.employee.EmployeeCitiesEditorController">
+  <children>
+    <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="1150.0">
+      <children>
+        <HBox alignment="TOP_CENTER" spacing="30.0" VBox.vgrow="ALWAYS">
+          <children>
+            <VBox maxWidth="500.0" spacing="30.0" HBox.hgrow="ALWAYS">
+              <children>
+                <Label styleClass="label-22" text="Select city:" underline="true"/>
+                <HBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" VBox.vgrow="ALWAYS">
+                  <children>
+                    <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                      maxWidth="250.0" styleClass="container-line-purple-light" HBox.hgrow="ALWAYS">
+                      <children>
+                        <JFXComboBox fx:id="citiesCB" labelFloat="true"
+                          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          promptText="Choose city:" HBox.hgrow="ALWAYS">
+                          <styleClass>
+                            <String fx:value="jfx-combo-box-text-black-purple"/>
+                            <String fx:value="label-20"/>
+                          </styleClass>
+                        </JFXComboBox>
+                      </children>
+                    </HBox>
+                    <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                      HBox.hgrow="ALWAYS">
+                      <children>
+                        <Separator orientation="VERTICAL" VBox.vgrow="ALWAYS"/>
+                        <Label alignment="CENTER" maxHeight="-Infinity"
+                          maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="OR"
+                          textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                          <VBox.margin>
+                            <Insets/>
+                          </VBox.margin>
+                          <styleClass>
+                            <String fx:value="label-16"/>
+                            <String fx:value="label-purple"/>
+                          </styleClass>
+                        </Label>
+                        <Separator orientation="VERTICAL" VBox.vgrow="ALWAYS"/>
+                      </children>
+                      <HBox.margin>
+                        <Insets left="10.0" right="10.0"/>
+                      </HBox.margin>
+                    </VBox>
+                    <JFXButton fx:id="createCityBTN" maxHeight="1.7976931348623157E308"
+                      maxWidth="1.7976931348623157E308" text="Create a new city"
+                      textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                      <styleClass>
+                        <String fx:value="button-fillable-blue"/>
+                        <String fx:value="label-20"/>
+                      </styleClass>
+                    </JFXButton>
+                  </children>
+                </HBox>
+                <Separator/>
+                <VBox alignment="BOTTOM_CENTER" spacing="80.0" VBox.vgrow="ALWAYS">
+                  <VBox.margin>
+                    <Insets top="-8.0"/>
+                  </VBox.margin>
+                  <children>
+                    <HBox>
+                      <children>
+                        <HBox fx:id="cityNameHB" alignment="CENTER" maxHeight="40.0"
+                          styleClass="container-line-purple-light" HBox.hgrow="ALWAYS">
+                          <children>
+                            <JFXTextField fx:id="cityNameTF" labelFloat="true"
+                              maxHeight="1.7976931348623157E308" promptText="City name:"
+                              HBox.hgrow="ALWAYS">
+                              <styleClass>
+                                <String fx:value="jfx-text-field-black-purple"/>
+                                <String fx:value="label-18"/>
+                              </styleClass>
+                            </JFXTextField>
+                            <EmojiOneView fx:id="cityNameICON" glyphName="CITYSCAPE" size="26"
+                              styleClass="glyph-icon-purple-light"/>
+                          </children>
+                        </HBox>
+                        <Region maxWidth="1.7976931348623157E308" minHeight="25.0"
+                          HBox.hgrow="ALWAYS"/>
+                        <HBox fx:id="versionHB" alignment="CENTER" layoutX="10.0" layoutY="10.0"
+                          maxHeight="40.0" maxWidth="150.0" styleClass="container-line-purple-light"
+                          HBox.hgrow="ALWAYS">
+                          <children>
+                            <JFXTextField fx:id="versionTF" disable="true" editable="false"
+                              labelFloat="true" maxHeight="1.7976931348623157E308"
+                              mouseTransparent="true" promptText="Version:" text="1.0"
+                              HBox.hgrow="ALWAYS">
+                              <styleClass>
+                                <String fx:value="jfx-text-field-black-purple"/>
+                                <String fx:value="label-18"/>
+                              </styleClass>
+                            </JFXTextField>
+                            <FontAwesomeIconView fx:id="versionICON" glyphName="BARCODE" size="26"
+                              styleClass="glyph-icon-purple"/>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                    <HBox fx:id="descriptionHB" alignment="CENTER"
+                      styleClass="container-line-purple-light">
+                      <children>
+                        <JFXTextArea fx:id="descriptionTA" labelFloat="true"
+                          promptText="Description:" wrapText="true">
+                          <styleClass>
+                            <String fx:value="jfx-text-field-black-purple"/>
+                            <String fx:value="label-18"/>
+                          </styleClass>
+                        </JFXTextArea>
+                        <MaterialIconView fx:id="descriptionICON" glyphName="DESCRIPTION" size="150"
+                          styleClass="glyph-icon-purple-light"/>
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+              </children>
+            </VBox>
+            <VBox alignment="CENTER" maxWidth="-Infinity" HBox.hgrow="ALWAYS">
+              <children>
+                <Separator orientation="VERTICAL" VBox.vgrow="ALWAYS"/>
+                <Label alignment="CENTER" maxHeight="50.0" maxWidth="1.7976931348623157E308"
+                  minWidth="-Infinity" text="Then" VBox.vgrow="ALWAYS">
+                  <VBox.margin>
+                    <Insets/>
+                  </VBox.margin>
+                  <styleClass>
+                    <String fx:value="label-16"/>
+                    <String fx:value="label-purple"/>
+                  </styleClass>
+                </Label>
+                <Separator orientation="VERTICAL" VBox.vgrow="ALWAYS"/>
+              </children>
+            </VBox>
+            <HBox maxWidth="400.0" HBox.hgrow="ALWAYS">
+              <children>
+                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                  minWidth="-Infinity" HBox.hgrow="ALWAYS">
+                  <children>
+                    <Label styleClass="label-22" text="Select maps to attach:" underline="true">
+                      <VBox.margin>
+                        <Insets bottom="40.0"/>
+                      </VBox.margin>
+                    </Label>
+                    <HBox alignment="CENTER" spacing="30.0" VBox.vgrow="ALWAYS">
+                      <children>
+                        <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="Available maps:">
+                              <styleClass>
+                                <String fx:value="colored-label-blue"/>
+                                <String fx:value="label-18"/>
+                              </styleClass>
+                            </Label>
+                            <JFXListView fx:id="availableMapsLV" styleClass="jfx-list-view-purple"
+                              VBox.vgrow="ALWAYS"/>
+                          </children>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="40.0" HBox.hgrow="NEVER">
+                          <children>
+                            <JFXButton fx:id="unattachBTN" styleClass="button-fillable-purple"
+                              text="&lt;&lt;"/>
+                            <JFXButton fx:id="attachBTN" styleClass="button-fillable-purple"
+                              text="&gt;&gt;"/>
+                          </children>
+                        </VBox>
+                        <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                          <children>
+                            <Label text="Attached maps:">
+                              <styleClass>
+                                <String fx:value="colored-label-blue"/>
+                                <String fx:value="label-18"/>
+                              </styleClass>
+                            </Label>
+                            <JFXListView fx:id="attachedMapsLV" styleClass="jfx-list-view-purple"
+                              VBox.vgrow="ALWAYS"/>
+                          </children>
+                        </VBox>
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+          </children>
+          <VBox.margin>
+            <Insets left="10.0" right="10.0"/>
+          </VBox.margin>
+        </HBox>
+        <Separator prefWidth="200.0" VBox.vgrow="NEVER">
+          <VBox.margin>
+            <Insets bottom="20.0" top="20.0"/>
+          </VBox.margin>
+        </Separator>
+        <JFXButton fx:id="saveBTN" buttonType="RAISED" maxWidth="1.7976931348623157E308"
+          styleClass="button-rainbow-blue-pink-yellow" text="Save" VBox.vgrow="ALWAYS">
+          <VBox.margin>
+            <Insets left="10.0" right="10.0"/>
+          </VBox.margin>
+        </JFXButton>
+      </children>
+      <padding>
+        <Insets bottom="30.0" left="20.0" right="20.0" top="20.0"/>
+      </padding>
+    </VBox>
+  </children>
+</AnchorPane>

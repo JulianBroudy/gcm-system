@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox fx:id="signInVB" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity"
+  minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="440.0"
+  styleClass="background-WelcomeScreenForm" stylesheets="@../../css/DefaultStyleSheet.css"
+  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.welcome.SignInFormController">
+  <children>
+    <Label maxHeight="-Infinity" maxWidth="-Infinity" text="Sign In">
+      <VBox.margin>
+        <Insets/>
+      </VBox.margin>
+      <styleClass>
+        <String fx:value="label-45"/>
+        <String fx:value="label-text-white"/>
+      </styleClass>
+    </Label>
+    <Region layoutX="40.0" layoutY="370.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308"
+      minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0"/>
+    <HBox fx:id="emailHB" alignment="CENTER_LEFT" styleClass="container-line-grey-light">
+      <children>
+        <JFXTextField fx:id="emailTF" focusColor="#511c38" labelFloat="true"
+          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Email"
+          unFocusColor="#c71515" HBox.hgrow="ALWAYS">
+          <styleClass>
+            <String fx:value="jfx-text-field-blue-light-pink"/>
+            <String fx:value="label-20"/>
+          </styleClass>
+        </JFXTextField>
+        <VBox alignment="CENTER" prefWidth="38.0">
+          <children>
+            <FontAwesomeIconView fx:id="emailICON" glyphName="AT" size="26"
+              styleClass="glyph-icon-blue-light"/>
+          </children>
+        </VBox>
+      </children>
+      <opaqueInsets>
+        <Insets/>
+      </opaqueInsets>
+    </HBox>
+    <Region maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="60.0"/>
+    <HBox fx:id="passwordHB" alignment="CENTER_LEFT" styleClass="container-line-grey-light">
+      <children>
+        <JFXPasswordField fx:id="passwordPF" focusColor="#fa65b3" labelFloat="true"
+          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Password"
+          unFocusColor="#a6a6a6" HBox.hgrow="ALWAYS">
+          <styleClass>
+            <String fx:value="jfx-text-field-blue-light-pink"/>
+            <String fx:value="label-20"/>
+          </styleClass>
+        </JFXPasswordField>
+        <VBox alignment="CENTER" prefWidth="38.0">
+          <children>
+            <FontAwesomeIconView fx:id="passwordICON" glyphName="KEY" size="26"
+              styleClass="glyph-icon-blue-light"/>
+          </children>
+        </VBox>
+      </children>
+      <opaqueInsets>
+        <Insets/>
+      </opaqueInsets>
+    </HBox>
+    <Region layoutX="40.0" layoutY="305.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308"
+      minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0"/>
+    <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308"
+      minHeight="-Infinity">
+      <children>
+        <Region maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+          HBox.hgrow="ALWAYS"/>
+        <Label fx:id="forgotPasswordBTN" text="Forgot Password?">
+          <styleClass>
+            <String fx:value="label-20"/>
+            <String fx:value="label-text-blue-light-pink"/>
+          </styleClass>
+        </Label>
+      </children>
+    </HBox>
+    <Region layoutX="40.0" layoutY="336.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308"
+      minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0"/>
+    <HBox alignment="CENTER_RIGHT" layoutX="40.0" layoutY="429.0" maxHeight="-Infinity"
+      maxWidth="1.7976931348623157E308" minHeight="-Infinity">
+      <children>
+        <JFXButton fx:id="signInBTN" buttonType="RAISED" maxWidth="1.7976931348623157E308"
+          prefHeight="80.0" ripplerFill="#9bc7fa" text="Sign In" HBox.hgrow="ALWAYS">
+          <font>
+            <Font name="System Bold" size="16.0"/>
+          </font>
+          <styleClass>
+            <String fx:value="button-rainbow-blue-pink-yellow"/>
+            <String fx:value="label-30"/>
+          </styleClass>
+        </JFXButton>
+      </children>
+    </HBox>
+  </children>
+  <padding>
+    <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+  </padding>
+</VBox>

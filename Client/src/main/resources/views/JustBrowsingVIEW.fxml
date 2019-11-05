@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+  prefHeight="700.0" prefWidth="1150.0" stylesheets="@../css/DefaultStyleSheet.css"
+  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.CatalogBrowsingController">
+  <children>
+    <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity"
+      maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0"
+      prefWidth="1150.0" styleClass="background-transparent" vbarPolicy="ALWAYS"
+      AnchorPane.topAnchor="150.0">
+      <stylesheets>
+        <URL value="@../css/DefaultStyleSheet.css"/>
+      </stylesheets>
+      <content>
+        <TilePane fx:id="citiesTP" alignment="CENTER" hgap="30.0" maxHeight="500.0" prefColumns="3"
+          prefRows="0" prefTileHeight="500.0" prefTileWidth="340.0"
+          styleClass="background-transparent" vgap="30.0">
+          <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+          </padding>
+        </TilePane>
+      </content>
+    </ScrollPane>
+    <HBox alignment="CENTER" maxHeight="152.0" prefHeight="152.0" prefWidth="1150.0"
+      AnchorPane.topAnchor="0.0">
+      <children>
+        <JFXComboBox fx:id="searchByCB" maxHeight="1.7976931348623157E308" maxWidth="250.0"
+          prefHeight="31.0" prefWidth="153.0" promptText="Search By:" styleClass="label-30"
+          HBox.hgrow="ALWAYS"/>
+        <CustomTextField fx:id="searchTF" maxWidth="1.7976931348623157E308" prefHeight="33.0"
+          prefWidth="239.0" HBox.hgrow="ALWAYS">
+          <styleClass>
+            <String fx:value="label-30"/>
+            <String fx:value="text-field-text-black"/>
+          </styleClass>
+        </CustomTextField>
+      </children>
+      <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+      </padding>
+    </HBox>
+    <Separator prefWidth="1150.0" AnchorPane.topAnchor="150.0"/>
+    <Label fx:id="searchActivitatedLBL" prefHeight="33.0" prefWidth="254.0"
+      AnchorPane.bottomAnchor="638.0" AnchorPane.rightAnchor="412.0"/>
+  </children>
+</AnchorPane>

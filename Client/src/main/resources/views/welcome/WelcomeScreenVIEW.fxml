@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+  prefHeight="740.0" prefWidth="1100.0" styleClass="background-transparent"
+  stylesheets="@../../css/DefaultStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.welcome.WelcomeScreenController">
+  <children>
+    <JFXDrawer fx:id="formDRAWER" defaultDrawerSize="427.0" prefHeight="600.0" prefWidth="440.0"
+      styleClass="background-transparent" AnchorPane.leftAnchor="609.0"
+      AnchorPane.topAnchor="80.0"/>
+    <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="150.0" spacing="5.0"
+      AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <children>
+        <JFXButton fx:id="signInBTN" buttonType="RAISED" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" styleClass="button-welcomeScreenMenu" text="Sign In"
+          VBox.vgrow="ALWAYS"/>
+        <JFXButton fx:id="registerBTN" buttonType="RAISED" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" styleClass="button-welcomeScreenMenu" text="Register"
+          VBox.vgrow="ALWAYS"/>
+        <JFXButton fx:id="justBrowseBTN" buttonType="RAISED" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" styleClass="button-welcomeScreenMenu" text="Just Browse"
+          VBox.vgrow="ALWAYS"/>
+      </children>
+    </VBox>
+    <AnchorPane layoutX="131.0" layoutY="-2.0" prefHeight="700.0" prefWidth="459.0"
+      styleClass="background-welcomeScreenMain" AnchorPane.leftAnchor="150.0"
+      AnchorPane.topAnchor="20.0">
+      <children>
+        <HBox alignment="CENTER"
+          style="-fx-background-color: whitesmoke; -fx-background-radius: 5 15 5 5;"
+          styleClass="background-minimize-exit" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0">
+          <children>
+            <JFXButton fx:id="minimizeBTN" alignment="CENTER" contentDisplay="CENTER"
+              graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" ripplerFill="#ff6fbe" text=" "
+              textAlignment="CENTER">
+              <graphic>
+                <FontAwesomeIconView boundsType="VISUAL" fill="#b92e2e" glyphName="MINUS" size="40"
+                  stroke="#333333" styleClass="glyph-icon-red" textAlignment="CENTER"/>
+              </graphic>
+              <padding>
+                <Insets right="-3.0" top="-1.0"/>
+              </padding>
+            </JFXButton>
+            <Separator orientation="VERTICAL">
+              <padding>
+                <Insets right="-6.0"/>
+              </padding>
+            </Separator>
+            <JFXButton fx:id="exitBTN" alignment="CENTER" contentDisplay="CENTER"
+              graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" ripplerFill="#ff6fbe" text=" "
+              textAlignment="CENTER">
+              <graphic>
+                <FontAwesomeIconView boundsType="VISUAL" fill="#b92e2e" glyphName="CLOSE" size="40"
+                  stroke="#333333" styleClass="glyph-icon-red" textAlignment="CENTER"/>
+              </graphic>
+              <padding>
+                <Insets right="-3.0" top="-1.0"/>
+              </padding>
+            </JFXButton>
+          </children>
+          <effect>
+            <InnerShadow/>
+          </effect>
+          <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+          </padding>
+        </HBox>
+      </children>
+      <effect>
+        <DropShadow height="50.75" offsetX="5.0" offsetY="2.0" radius="24.6875" width="50.0"/>
+      </effect>
+    </AnchorPane>
+  </children>
+</AnchorPane>

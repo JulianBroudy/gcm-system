@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.sothawo.mapjfx.MapView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.CheckListView?>
+<?import org.controlsfx.control.CheckTreeView?>
+<AnchorPane prefHeight="700.0" prefWidth="1150.0" styleClass="background-whitesmoke"
+  stylesheets="@../../css/DefaultStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.customer.CustomerCityExplorerController">
+  <children>
+    <MapView fx:id="mapView" prefHeight="700.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0"
+      AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+    <JFXButton fx:id="backBTN" buttonType="RAISED" graphicTextGap="15.0" layoutX="489.0"
+      layoutY="671.0" maxHeight="50.0" maxWidth="150.0" minHeight="50.0" minWidth="150.0"
+      prefHeight="50.0" prefWidth="150.0" text="Back" AnchorPane.bottomAnchor="0.0"
+      AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0">
+      <graphic>
+        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_DOWN" size="20"/>
+      </graphic>
+      <styleClass>
+        <String fx:value="button-city-preview-back"/>
+        <String fx:value="label-text-white"/>
+        <String fx:value="label-20"/>
+      </styleClass>
+    </JFXButton>
+    <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+      AnchorPane.rightAnchor="750.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox alignment="BOTTOM_LEFT" maxHeight="40.0" maxWidth="1.7976931348623157E308"
+          minHeight="40.0" styleClass="container-line-purple-light" VBox.vgrow="NEVER">
+          <children>
+            <JFXComboBox fx:id="mapsCB" labelFloat="true" maxHeight="1.7976931348623157E308"
+              maxWidth="1.7976931348623157E308" promptText="Map:" HBox.hgrow="ALWAYS">
+              <styleClass>
+                <String fx:value="jfx-combo-box-text-black-purple"/>
+                <String fx:value="label-20"/>
+              </styleClass>
+            </JFXComboBox>
+          </children>
+        </HBox>
+        <Label styleClass="label-16" text="Sites:">
+          <VBox.margin>
+            <Insets/>
+          </VBox.margin>
+        </Label>
+        <CheckTreeView fx:id="sitesCTV" maxHeight="1.7976931348623157E308"
+          styleClass="jfx-list-view-purple" VBox.vgrow="ALWAYS">
+          <VBox.margin>
+            <Insets top="-10.0"/>
+          </VBox.margin>
+        </CheckTreeView>
+        <Label styleClass="label-16" text="Tours:">
+          <VBox.margin>
+            <Insets/>
+          </VBox.margin>
+        </Label>
+        <CheckListView fx:id="toursCLV" maxHeight="1.7976931348623157E308"
+          styleClass="jfx-list-view-purple" VBox.vgrow="ALWAYS">
+          <VBox.margin>
+            <Insets top="-10.0"/>
+          </VBox.margin>
+        </CheckListView>
+        <JFXButton fx:id="downloadSnapshotBTN" buttonType="RAISED" maxHeight="100.0"
+          maxWidth="1.7976931348623157E308" text="Download a Snapshot" textAlignment="CENTER"
+          wrapText="true">
+          <styleClass>
+            <String fx:value="button-rainbow-blue-pink-yellow-hover"/>
+            <String fx:value="label-30"/>
+          </styleClass>
+        </JFXButton>
+      </children>
+      <padding>
+        <Insets bottom="30.0" left="20.0" right="20.0" top="30.0"/>
+      </padding>
+    </VBox>
+    <JFXToggleButton fx:id="mapTypeTB" contentDisplay="RIGHT" layoutX="692.0" layoutY="14.0"
+      selected="true" styleClass="toggle-button-map-type" text="Aerial View" toggleColor="#7657b2"
+      toggleLineColor="#c5b3e8" AnchorPane.leftAnchor="692.0"
+      AnchorPane.rightAnchor="292.26414497894234" AnchorPane.topAnchor="10.0"/>
+  </children>
+</AnchorPane>

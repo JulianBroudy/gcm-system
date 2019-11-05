@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="700.0" prefWidth="1150.0" stylesheets="@../../css/DefaultStyleSheet.css"
+  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.employee.EmployeeMyAccountController">
+  <children>
+    <VBox layoutX="-15.0" layoutY="-11.0" prefHeight="700.0" prefWidth="1150.0"
+      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+      AnchorPane.topAnchor="0.0">
+      <children>
+        <Accordion fx:id="accordion" prefHeight="600.0" prefWidth="1150.0" styleClass="accordion2"
+          VBox.vgrow="ALWAYS">
+          <panes>
+            <TitledPane prefHeight="200.0" prefWidth="200.0" styleClass="accordion2"
+              text="General Info">
+              <content>
+                <VBox alignment="CENTER" prefWidth="1150.0" spacing="60.0">
+                  <children>
+                    <HBox fx:id="firstNameHB" alignment="CENTER_LEFT" prefHeight="40.0"
+                      prefWidth="170.0" styleClass="container-line-blue-light">
+                      <children>
+                        <JFXTextField fx:id="firstNameTF" focusColor="#fa65b3" labelFloat="true"
+                          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          promptText="First Name" unFocusColor="#a6a6a6" HBox.hgrow="ALWAYS">
+                          <styleClass>
+                            <String fx:value="label-20"/>
+                            <String fx:value="jfx-text-field-blue-light-pink"/>
+                            <String fx:value="text-field-text-black"/>
+                          </styleClass>
+                        </JFXTextField>
+                        <VBox alignment="CENTER" prefWidth="38.0" HBox.hgrow="NEVER">
+                          <children>
+                            <FontAwesomeIconView fx:id="firstNameICON" glyphName="ADDRESS_CARD"
+                              size="26" styleClass="glyph-icon-blue-light"/>
+                          </children>
+                          <HBox.margin>
+                            <Insets/>
+                          </HBox.margin>
+                          <padding>
+                            <Insets right="5.0"/>
+                          </padding>
+                        </VBox>
+                      </children>
+                      <opaqueInsets>
+                        <Insets/>
+                      </opaqueInsets>
+                    </HBox>
+                    <HBox fx:id="lastNameHB" alignment="CENTER_LEFT" prefWidth="170.0"
+                      styleClass="container-line-blue-light">
+                      <children>
+                        <JFXTextField fx:id="lastNameTF" focusColor="#fa65b3" labelFloat="true"
+                          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          promptText="Last Name" unFocusColor="#a6a6a6" HBox.hgrow="ALWAYS">
+                          <styleClass>
+                            <String fx:value="label-20"/>
+                            <String fx:value="jfx-text-field-blue-light-pink"/>
+                            <String fx:value="text-field-text-black"/>
+                          </styleClass>
+                        </JFXTextField>
+                        <VBox alignment="CENTER" prefWidth="38.0" HBox.hgrow="NEVER">
+                          <children>
+                            <FontAwesomeIconView fx:id="lastNameICON" glyphName="ADDRESS_CARD_ALT"
+                              size="26" styleClass="glyph-icon-blue-light"/>
+                          </children>
+                          <HBox.margin>
+                            <Insets/>
+                          </HBox.margin>
+                          <padding>
+                            <Insets right="5.0"/>
+                          </padding>
+                        </VBox>
+                      </children>
+                      <opaqueInsets>
+                        <Insets/>
+                      </opaqueInsets>
+                    </HBox>
+                    <HBox fx:id="usernameHB" alignment="CENTER_LEFT"
+                      styleClass="container-line-blue-light">
+                      <children>
+                        <JFXTextField fx:id="usernameTF" focusColor="#fa65b3" labelFloat="true"
+                          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          promptText="Username" unFocusColor="#a6a6a6" HBox.hgrow="ALWAYS">
+                          <styleClass>
+                            <String fx:value="label-20"/>
+                            <String fx:value="jfx-text-field-blue-light-pink"/>
+                            <String fx:value="text-field-text-black"/>
+                          </styleClass>
+                        </JFXTextField>
+                        <VBox alignment="CENTER" HBox.hgrow="NEVER">
+                          <children>
+                            <FontAwesomeIconView fx:id="usernameICON" glyphName="USER" size="26"
+                              styleClass="glyph-icon-blue-light"/>
+                          </children>
+                          <HBox.margin>
+                            <Insets/>
+                          </HBox.margin>
+                          <padding>
+                            <Insets right="5.0"/>
+                          </padding>
+                        </VBox>
+                      </children>
+                      <opaqueInsets>
+                        <Insets/>
+                      </opaqueInsets>
+                    </HBox>
+                    <HBox>
+                      <children>
+                        <HBox fx:id="phoneNumberPrefixHB" alignment="CENTER_LEFT"
+                          maxHeight="1.7976931348623157E308" maxWidth="-Infinity"
+                          styleClass="container-line-blue-light" HBox.hgrow="ALWAYS">
+                          <children>
+                            <JFXComboBox fx:id="phoneNumberPrefixCB" focusColor="#30252b"
+                              labelFloat="true" maxHeight="1.7976931348623157E308"
+                              maxWidth="1.7976931348623157E308" promptText="###"
+                              unFocusColor="#c71a1a" HBox.hgrow="ALWAYS">
+                              <styleClass>
+                                <String fx:value="jfx-combo-box-text-blue-light"/>
+                                <String fx:value="label-20"/>
+                                <String fx:value="text-field-text-black"/>
+                              </styleClass>
+                            </JFXComboBox>
+                          </children>
+                        </HBox>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308"
+                          prefWidth="40.0" text="-" textAlignment="CENTER" textFill="#99bce0"
+                          HBox.hgrow="ALWAYS">
+                          <font>
+                            <Font name="System Bold" size="20.0"/>
+                          </font>
+                        </Label>
+                        <HBox fx:id="phoneNumberHB" alignment="CENTER_LEFT" layoutX="10.0"
+                          layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity"
+                          styleClass="container-line-blue-light" HBox.hgrow="ALWAYS">
+                          <children>
+                            <JFXTextField fx:id="phoneNumberTF" focusColor="#fa65b3"
+                              labelFloat="true" maxHeight="1.7976931348623157E308"
+                              maxWidth="1.7976931348623157E308" prefColumnCount="8"
+                              promptText="Phone Number" unFocusColor="#a6a6a6" HBox.hgrow="ALWAYS">
+                              <styleClass>
+                                <String fx:value="label-20"/>
+                                <String fx:value="jfx-text-field-blue-light-pink"/>
+                                <String fx:value="text-field-text-black"/>
+                              </styleClass>
+                            </JFXTextField>
+                            <VBox alignment="CENTER" HBox.hgrow="NEVER">
+                              <children>
+                                <FontAwesomeIconView fx:id="phoneNumberICON" glyphName="PHONE"
+                                  size="26" styleClass="glyph-icon-blue-light"/>
+                              </children>
+                              <HBox.margin>
+                                <Insets/>
+                              </HBox.margin>
+                              <padding>
+                                <Insets right="5.0"/>
+                              </padding>
+                            </VBox>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                  </children>
+                  <padding>
+                    <Insets bottom="50.0" left="300.0" right="300.0" top="50.0"/>
+                  </padding>
+                </VBox>
+              </content>
+            </TitledPane>
+            <TitledPane prefHeight="200.0" prefWidth="200.0" text="Security">
+              <content>
+                <VBox alignment="CENTER" prefWidth="1150.0" spacing="70.0">
+                  <padding>
+                    <Insets bottom="50.0" left="300.0" right="300.0" top="50.0"/>
+                  </padding>
+                  <children>
+                    <HBox fx:id="passwordHB" alignment="CENTER_LEFT"
+                      styleClass="container-line-blue-light">
+                      <children>
+                        <JFXPasswordField fx:id="passwordPF" focusColor="BLACK" labelFloat="true"
+                          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          promptText="Password" unFocusColor="#a6a6a6" HBox.hgrow="ALWAYS">
+                          <styleClass>
+                            <String fx:value="jfx-text-field-blue-light-pink"/>
+                            <String fx:value="label-20"/>
+                            <String fx:value="text-field-text-black"/>
+                          </styleClass>
+                        </JFXPasswordField>
+                        <VBox alignment="CENTER" prefWidth="38.0">
+                          <children>
+                            <FontAwesomeIconView fx:id="passwordICON" glyphName="UNLOCK" size="26"
+                              styleClass="glyph-icon-blue-light"/>
+                          </children>
+                        </VBox>
+                      </children>
+                      <opaqueInsets>
+                        <Insets/>
+                      </opaqueInsets>
+                    </HBox>
+                    <HBox fx:id="rePasswordHB" alignment="CENTER_LEFT"
+                      styleClass="container-line-blue-light">
+                      <children>
+                        <JFXPasswordField fx:id="rePasswordPF" focusColor="BLACK" labelFloat="true"
+                          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          promptText="Re-type Password" unFocusColor="#a6a6a6" HBox.hgrow="ALWAYS">
+                          <styleClass>
+                            <String fx:value="jfx-text-field-blue-light-pink"/>
+                            <String fx:value="label-20"/>
+                            <String fx:value="text-field-text-black"/>
+                          </styleClass>
+                        </JFXPasswordField>
+                        <VBox alignment="CENTER" prefWidth="38.0">
+                          <children>
+                            <FontAwesomeIconView fx:id="rePasswordICON" glyphName="LOCK" size="26"
+                              styleClass="glyph-icon-blue-light"/>
+                          </children>
+                        </VBox>
+                      </children>
+                      <opaqueInsets>
+                        <Insets/>
+                      </opaqueInsets>
+                    </HBox>
+                  </children>
+                </VBox>
+              </content>
+            </TitledPane>
+            <TitledPane prefHeight="200.0" prefWidth="200.0" text="Payment">
+              <content>
+                <VBox alignment="CENTER" prefWidth="1150.0" spacing="60.0">
+                  <padding>
+                    <Insets bottom="50.0" left="300.0" right="300.0" top="50.0"/>
+                  </padding>
+                  <children>
+                    <HBox fx:id="fullNameHB" alignment="CENTER_LEFT"
+                      styleClass="container-line-blue-light">
+                      <children>
+                        <JFXTextField fx:id="fullNameTF" focusColor="#fa65b3" labelFloat="true"
+                          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          promptText="Cardholder's Full Name" unFocusColor="#a6a6a6"
+                          HBox.hgrow="ALWAYS">
+                          <styleClass>
+                            <String fx:value="label-20"/>
+                            <String fx:value="jfx-text-field-blue-light-pink"/>
+                            <String fx:value="text-field-text-black"/>
+                          </styleClass>
+                        </JFXTextField>
+                        <VBox alignment="CENTER">
+                          <children>
+                            <FontAwesomeIconView fx:id="fullNameICON" glyphName="ADDRESS_CARD_ALT"
+                              size="26" styleClass="glyph-icon-blue-light"/>
+                          </children>
+                          <padding>
+                            <Insets right="5.0"/>
+                          </padding>
+                        </VBox>
+                      </children>
+                      <opaqueInsets>
+                        <Insets/>
+                      </opaqueInsets>
+                    </HBox>
+                    <HBox fx:id="idHB" alignment="CENTER_LEFT"
+                      styleClass="container-line-blue-light">
+                      <children>
+                        <JFXTextField fx:id="idTF" focusColor="#fa65b3" labelFloat="true"
+                          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          promptText="Card Holder's ID" unFocusColor="#a6a6a6" HBox.hgrow="ALWAYS">
+                          <styleClass>
+                            <String fx:value="label-20"/>
+                            <String fx:value="jfx-text-field-blue-light-pink"/>
+                            <String fx:value="text-field-text-black"/>
+                          </styleClass>
+                        </JFXTextField>
+                        <VBox alignment="CENTER">
+                          <children>
+                            <FontAwesomeIconView fx:id="idICON" glyphName="DRIVERS_LICENSE_ALT"
+                              size="26" styleClass="glyph-icon-blue-light"/>
+                          </children>
+                          <padding>
+                            <Insets right="5.0"/>
+                          </padding>
+                        </VBox>
+                      </children>
+                      <opaqueInsets>
+                        <Insets/>
+                      </opaqueInsets>
+                    </HBox>
+                    <HBox fx:id="ccHB" alignment="CENTER_LEFT"
+                      styleClass="container-line-blue-light">
+                      <children>
+                        <JFXTextField fx:id="ccTF" focusColor="#fa65b3" labelFloat="true"
+                          maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          promptText="XXXX-XXXX-XXXX-XXXX" unFocusColor="#a6a6a6"
+                          HBox.hgrow="ALWAYS">
+                          <styleClass>
+                            <String fx:value="label-20"/>
+                            <String fx:value="jfx-text-field-blue-light-pink"/>
+                            <String fx:value="text-field-text-black"/>
+                          </styleClass>
+                        </JFXTextField>
+                        <VBox alignment="CENTER">
+                          <children>
+                            <FontAwesomeIconView fx:id="ccICON" glyphName="CREDIT_CARD" size="26"
+                              styleClass="glyph-icon-blue-light"/>
+                          </children>
+                          <padding>
+                            <Insets right="5.0"/>
+                          </padding>
+                        </VBox>
+                      </children>
+                      <opaqueInsets>
+                        <Insets/>
+                      </opaqueInsets>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT">
+                      <children>
+                        <HBox fx:id="expirationDateHB" alignment="CENTER_LEFT" layoutX="10.0"
+                          layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity"
+                          prefHeight="45.0" prefWidth="200.0"
+                          styleClass="container-line-blue-light">
+                          <children>
+                            <JFXDatePicker fx:id="expirationDP" maxHeight="1.7976931348623157E308"
+                              maxWidth="1.7976931348623157E308" prefHeight="44.0" prefWidth="201.0"
+                              promptText="Expiration Date" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                <Insets right="-3.0"/>
+                              </HBox.margin>
+                              <defaultColor>
+                                <LinearGradient endX="0.43478260869565233" endY="0.7053140096618358"
+                                  startX="0.4444444444444444" startY="0.19806763285024154">
+                                  <stops>
+                                    <Stop color="#be25ff"/>
+                                    <Stop color="#be25ff" offset="0.23985239852398524"/>
+                                    <Stop color="#5342a9" offset="0.5064177219845288"/>
+                                    <Stop color="#ffffff90" offset="0.6511627906976745"/>
+                                    <Stop color="#206aff" offset="1.0"/>
+                                  </stops>
+                                </LinearGradient>
+                              </defaultColor>
+                              <styleClass>
+                                <String fx:value="label-20"/>
+                                <String fx:value="jfx-date-picker-blue-light-pink"/>
+                                <String fx:value="text-field-text-black"/>
+                              </styleClass>
+                            </JFXDatePicker>
+                          </children>
+                        </HBox>
+                        <Region maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          HBox.hgrow="ALWAYS"/>
+                        <HBox fx:id="cvvHB" alignment="CENTER_LEFT"
+                          maxHeight="1.7976931348623157E308" styleClass="container-line-blue-light"
+                          HBox.hgrow="ALWAYS">
+                          <children>
+                            <JFXTextField fx:id="cvvTF" focusColor="#fa65b3" labelFloat="true"
+                              maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                              prefColumnCount="5" promptText="CVV" unFocusColor="#a6a6a6"
+                              HBox.hgrow="ALWAYS">
+                              <styleClass>
+                                <String fx:value="label-20"/>
+                                <String fx:value="jfx-text-field-blue-light-pink"/>
+                                <String fx:value="text-field-text-black"/>
+                              </styleClass>
+                            </JFXTextField>
+                            <VBox alignment="CENTER">
+                              <children>
+                                <FontAwesomeIconView fx:id="cvvICON" glyphName="CC" size="26"
+                                  styleClass="glyph-icon-blue-light"/>
+                              </children>
+                              <padding>
+                                <Insets right="5.0"/>
+                              </padding>
+                            </VBox>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+              </content>
+            </TitledPane>
+          </panes>
+        </Accordion>
+        <HBox alignment="CENTER" maxHeight="100.0" minHeight="100.0" prefHeight="100.0"
+          VBox.vgrow="ALWAYS">
+          <children>
+            <JFXButton fx:id="saveBTN" buttonType="RAISED" maxWidth="1.7976931348623157E308"
+              styleClass="button-rainbow-blue-pink-yellow" text="Save" HBox.hgrow="ALWAYS"/>
+          </children>
+          <VBox.margin>
+            <Insets/>
+          </VBox.margin>
+          <padding>
+            <Insets left="20.0" right="20.0"/>
+          </padding>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

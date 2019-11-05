@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<AnchorPane prefHeight="700.0" prefWidth="1150.0" stylesheets="@../../css/DefaultStyleSheet.css"
+  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.employee.EmployeeMyWorkspaceController">
+  <children>
+    <HBox alignment="CENTER" layoutX="55.0" prefHeight="100.0" prefWidth="1040.0"
+      AnchorPane.bottomAnchor="600.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <BorderPane maxWidth="225.0" minWidth="225.0" HBox.hgrow="NEVER">
+          <center>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" text="City"
+              textAlignment="CENTER">
+              <styleClass>
+                <String fx:value="label-28"/>
+                <String fx:value="label-bold"/>
+              </styleClass>
+            </Label>
+          </center>
+        </BorderPane>
+        <BorderPane maxWidth="125.0" minWidth="125.0" HBox.hgrow="NEVER">
+          <center>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="0.0" text="#Maps"
+              textAlignment="CENTER">
+              <styleClass>
+                <String fx:value="label-28"/>
+                <String fx:value="label-bold"/>
+              </styleClass>
+            </Label>
+          </center>
+        </BorderPane>
+        <BorderPane maxWidth="125.0" minWidth="125.0" HBox.hgrow="NEVER">
+          <center>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="0.0" text="#Sites"
+              textAlignment="CENTER">
+              <styleClass>
+                <String fx:value="label-28"/>
+                <String fx:value="label-bold"/>
+              </styleClass>
+            </Label>
+          </center>
+        </BorderPane>
+        <BorderPane maxWidth="215.0" minWidth="215.0" HBox.hgrow="NEVER">
+          <center>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="0.0" text="Status"
+              textAlignment="CENTER">
+              <styleClass>
+                <String fx:value="label-28"/>
+                <String fx:value="label-bold"/>
+              </styleClass>
+            </Label>
+          </center>
+        </BorderPane>
+        <BorderPane maxWidth="300.0" minWidth="300.0" HBox.hgrow="NEVER">
+          <center>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="0.0" text="Actions"
+              textAlignment="CENTER">
+              <styleClass>
+                <String fx:value="label-28"/>
+                <String fx:value="label-bold"/>
+              </styleClass>
+            </Label>
+          </center>
+        </BorderPane>
+      </children>
+      <padding>
+        <Insets left="50.0"/>
+      </padding>
+    </HBox>
+    <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="1150.0"
+      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+      AnchorPane.topAnchor="100.0">
+      <content>
+        <TilePane fx:id="citiesTP" alignment="TOP_CENTER" maxWidth="1150.0" minWidth="1150.0"
+          prefColumns="1" prefHeight="600.0" prefTileHeight="100.0" prefWidth="1150.0" vgap="20.0">
+          <padding>
+            <Insets bottom="20.0" left="50.0" right="60.0" top="20.0"/>
+          </padding>
+        </TilePane>
+      </content>
+    </ScrollPane>
+  </children>
+</AnchorPane>

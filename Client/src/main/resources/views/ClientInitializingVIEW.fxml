@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+  prefHeight="580.0" prefWidth="480.0" styleClass="default-background"
+  stylesheets="@../css/DefaultStyleSheet.css" xmlns="http://javafx.com/javafx/10.0.2"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.ClientInitializingController">
+  <children>
+    <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="580.0" prefWidth="480.0" spacing="40.0"
+      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+      AnchorPane.topAnchor="0.0">
+      <children>
+        <Label text="Client">
+          <font>
+            <Font name="Eras Bold ITC" size="30.0"/>
+          </font>
+          <VBox.margin>
+            <Insets/>
+          </VBox.margin>
+          <styleClass>
+            <String fx:value="label-50"/>
+            <String fx:value="label-text-blue"/>
+            <String fx:value="label-text-stroke-yellow"/>
+          </styleClass>
+        </Label>
+        <HBox alignment="CENTER">
+          <children>
+            <Label text="State: ">
+              <font>
+                <Font name="Eras Bold ITC" size="30.0"/>
+              </font>
+              <styleClass>
+                <String fx:value="label-28"/>
+                <String fx:value="label-text-blue"/>
+              </styleClass>
+            </Label>
+            <Label fx:id="stateLBL" text="disconnected" textFill="#e51313">
+              <font>
+                <Font name="Eras Bold ITC" size="30.0"/>
+              </font>
+              <styleClass>
+                <String fx:value="label-28"/>
+                <String fx:value="label-text-yellow"/>
+                <String fx:value="label-light"/>
+              </styleClass>
+            </Label>
+          </children>
+          <VBox.margin>
+            <Insets bottom="-30.0" top="-30.0"/>
+          </VBox.margin>
+        </HBox>
+        <Region VBox.vgrow="ALWAYS">
+          <VBox.margin>
+            <Insets bottom="-20.0"/>
+          </VBox.margin>
+        </Region>
+        <HBox fx:id="hostHB" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308"
+          styleClass="container-line-blue-light">
+          <children>
+            <JFXTextField fx:id="hostTF" maxHeight="1.7976931348623157E308"
+              maxWidth="1.7976931348623157E308" promptText="Host:" unFocusColor="#ca1c1c"
+              HBox.hgrow="ALWAYS">
+              <styleClass>
+                <String fx:value="label-22"/>
+                <String fx:value="jfx-text-field-blue-light-yellow"/>
+              </styleClass>
+            </JFXTextField>
+            <VBox alignment="CENTER" prefWidth="38.0">
+              <children>
+                <FontAwesomeIconView fx:id="hostICON" glyphName="LAPTOP" size="26"
+                  styleClass="glyph-icon-blue-light"/>
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+        <HBox fx:id="portHB" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308"
+          styleClass="container-line-blue-light">
+          <children>
+            <JFXTextField fx:id="portTF" maxHeight="1.7976931348623157E308"
+              maxWidth="1.7976931348623157E308" promptText="Port:" unFocusColor="#ca1c1c"
+              HBox.hgrow="ALWAYS">
+              <styleClass>
+                <String fx:value="label-22"/>
+                <String fx:value="jfx-text-field-blue-light-yellow"/>
+              </styleClass>
+            </JFXTextField>
+            <VBox alignment="CENTER" prefWidth="38.0" HBox.hgrow="NEVER">
+              <children>
+                <FontAwesomeIconView fx:id="portICON" glyphName="SHIP" size="26"
+                  styleClass="glyph-icon-blue-light"/>
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+        <Region VBox.vgrow="ALWAYS"/>
+        <HBox spacing="20.0" VBox.vgrow="NEVER">
+          <children>
+            <JFXButton fx:id="disconnectBTN" maxHeight="1.7976931348623157E308"
+              maxWidth="1.7976931348623157E308" text="Disconnect" HBox.hgrow="ALWAYS">
+              <styleClass>
+                <String fx:value="button-white-border-red-hover"/>
+                <String fx:value="label-26"/>
+              </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="connectBTN" maxHeight="1.7976931348623157E308"
+              maxWidth="1.7976931348623157E308" text="Connect" HBox.hgrow="ALWAYS">
+              <styleClass>
+                <String fx:value="button-rainbow"/>
+                <String fx:value="label-26"/>
+              </styleClass>
+            </JFXButton>
+          </children>
+          <VBox.margin>
+            <Insets top="-30.0"/>
+          </VBox.margin>
+        </HBox>
+      </children>
+      <padding>
+        <Insets bottom="50.0" left="50.0" right="50.0" top="40.0"/>
+      </padding>
+    </VBox>
+    <HBox layoutX="398.2452697753906" layoutY="1.0" styleClass="background-minimize-exit"
+      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <JFXButton fx:id="minimizeBTN" alignment="CENTER" contentDisplay="CENTER"
+          graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" ripplerFill="YELLOW" text=" "
+          textAlignment="CENTER">
+          <graphic>
+            <FontAwesomeIconView boundsType="VISUAL" fill="#b92e2e"
+              glyphName="MINUS" size="40" stroke="#333333" styleClass="glyph-icon-red"
+              textAlignment="CENTER"/>
+          </graphic>
+          <padding>
+            <Insets right="-3.0" top="-1.0"/>
+          </padding>
+        </JFXButton>
+        <Separator orientation="VERTICAL" HBox.hgrow="NEVER">
+          <padding>
+            <Insets right="-6.0"/>
+          </padding>
+        </Separator>
+        <JFXButton fx:id="exitBTN" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0"
+          maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          prefHeight="40.0" prefWidth="40.0" ripplerFill="YELLOW" text=" " textAlignment="CENTER">
+          <graphic>
+            <FontAwesomeIconView boundsType="VISUAL" fill="#b92e2e"
+              glyphName="CLOSE" size="40" stroke="#333333" styleClass="glyph-icon-red"
+              textAlignment="CENTER"/>
+          </graphic>
+          <padding>
+            <Insets right="-3.0" top="-1.0"/>
+          </padding>
+        </JFXButton>
+      </children>
+    </HBox>
+    <AnchorPane fx:id="progressBarAP" layoutX="11.0" layoutY="484.0" AnchorPane.bottomAnchor="0.0"
+      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <JFXProgressBar fx:id="progressBar" accessibleRole="NODE" maxHeight="-Infinity"
+          maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="8.0"
+          prefWidth="478.0" AnchorPane.bottomAnchor="0.0"/>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

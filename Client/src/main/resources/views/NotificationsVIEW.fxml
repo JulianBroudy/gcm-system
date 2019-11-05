@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" disable="true" maxHeight="500.0" maxWidth="300.0"
+  minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="500.0"
+  prefWidth="300.0" styleClass="transparent-background" xmlns="http://javafx.com/javafx/8.0.171"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.NotificationsController">
+  <children>
+    <VBox alignment="CENTER" layoutX="244.0" maxHeight="100.0" minHeight="100.0" prefHeight="100.0"
+      AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <FontAwesomeIconView fx:id="notificationsBTN" boundsType="VISUAL" fill="WHITESMOKE"
+          glyphName="BELL" size="60" styleClass="bell-icon" wrappingWidth="43.0"
+          VBox.vgrow="NEVER"/>
+      </children>
+    </VBox>
+    <VBox fx:id="notificationsVB" layoutY="100.0" maxHeight="400.0" maxWidth="300.0"
+      prefHeight="300.0" prefWidth="300.0" styleClass="transparent-background" visible="false"
+      AnchorPane.topAnchor="100.0">
+      <children>
+        <AnchorPane VBox.vgrow="ALWAYS">
+          <children>
+            <OctIconView boundsType="VISUAL" fill="WHITESMOKE" glyphName="TRIANGLE_UP"
+              layoutX="261.29998779296875" size="30" AnchorPane.rightAnchor="26.20001220703125"
+              AnchorPane.topAnchor="0.0"/>
+          </children>
+          <VBox.margin>
+            <Insets/>
+          </VBox.margin>
+          <padding>
+            <Insets bottom="-5.0"/>
+          </padding>
+        </AnchorPane>
+        <VBox alignment="TOP_CENTER" maxHeight="400.0" minHeight="300.0" minWidth="-Infinity"
+          prefWidth="300.0" styleClass="notifications-vbox">
+          <children>
+            <HBox alignment="CENTER" maxHeight="30.0" styleClass="notifications-title"
+              VBox.vgrow="ALWAYS">
+              <children>
+                <Label styleClass="label-18" text="Notifications" textAlignment="CENTER"
+                  wrapText="true" HBox.hgrow="ALWAYS"/>
+              </children>
+              <VBox.margin>
+                <Insets/>
+              </VBox.margin>
+              <padding>
+                <Insets bottom="10.0" top="10.0"/>
+              </padding>
+            </HBox>
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pannable="true"
+              styleClass="notifications-scroll-pane" VBox.vgrow="ALWAYS">
+              <content>
+                <VBox fx:id="notificationsListVB" maxHeight="1.7976931348623157E308"
+                  maxWidth="1.7976931348623157E308">
+                  <opaqueInsets>
+                    <Insets/>
+                  </opaqueInsets>
+                </VBox>
+              </content>
+              <VBox.margin>
+                <Insets/>
+              </VBox.margin>
+            </ScrollPane>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="30.0">
+              <children>
+                <Label fx:id="newNotificationsLBL" text="x new notifications" textAlignment="CENTER"
+                  wrapText="true" HBox.hgrow="ALWAYS">
+                  <styleClass>
+                    <String fx:value="label-14"/>
+                    <String fx:value="label-light"/>
+                  </styleClass>
+                </Label>
+              </children>
+              <padding>
+                <Insets bottom="10.0" top="10.0"/>
+              </padding>
+            </HBox>
+          </children>
+        </VBox>
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@../css/DefaultStyleSheet.css"/>
+  </stylesheets>
+</AnchorPane>

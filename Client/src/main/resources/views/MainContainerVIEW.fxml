@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?language javascript?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+  prefHeight="800.0" prefWidth="1400.0" styleClass="background-transparent"
+  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.broudy.gcm.boundary.fxmlControllers.MainContainerController">
+  <children>
+    <JFXDrawer fx:id="sidePaneDRAWER" defaultDrawerSize="250.0" direction="RIGHT" maxHeight="800.0"
+      maxWidth="250.0" minHeight="800.0" minWidth="250.0" prefHeight="800.0" prefWidth="250.0"
+      styleClass="background-transparent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+      AnchorPane.topAnchor="0.0"/>
+    <JFXDrawer fx:id="switchableViewDRAWER" defaultDrawerSize="700.0" direction="BOTTOM"
+      maxHeight="700.0" maxWidth="1150.0" minHeight="700.0" minWidth="1150.0" overLayVisible="false"
+      prefHeight="700.0" prefWidth="1150.0" resizeContent="true" AnchorPane.bottomAnchor="0.0"
+      AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0"/>
+    <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="100.0" prefWidth="1150.0"
+      styleClass="background-switcheroo-top-pane" AnchorPane.leftAnchor="249.8112793620587"
+      AnchorPane.rightAnchor="-0.1887206379413" AnchorPane.topAnchor="0.0">
+      <center>
+        <Label fx:id="windowTitleLBL" text="Label" BorderPane.alignment="CENTER">
+          <styleClass>
+            <String fx:value="label-text-white"/>
+            <String fx:value="label-45"/>
+            <String fx:value="label-dropshadow-effect"/>
+          </styleClass>
+        </Label>
+      </center>
+    </BorderPane>
+    <JFXHamburger fx:id="menuToggleBTN" scaleX="1.5" scaleY="1.5" translateX="270.0"
+      translateY="37.0"/>
+    <HBox alignment="CENTER" prefHeight="50.0" styleClass="background-minimize-exit"
+      AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <children>
+        <JFXButton fx:id="minimizeBTN" contentDisplay="GRAPHIC_ONLY" ripplerFill="#fb74bb">
+          <graphic>
+            <FontAwesomeIconView glyphName="MINUS" size="60"/>
+          </graphic>
+          <padding>
+            <Insets left="10.0" right="5.0" top="8.0"/>
+          </padding>
+        </JFXButton>
+        <JFXButton fx:id="exitBTN" contentDisplay="GRAPHIC_ONLY" layoutX="132.0" layoutY="23.0"
+          ripplerFill="#fb74bb">
+          <graphic>
+            <FontAwesomeIconView glyphName="CLOSE" size="60"/>
+          </graphic>
+        </JFXButton>
+      </children>
+      <effect>
+        <InnerShadow/>
+      </effect>
+      <padding>
+        <Insets left="2.0" right="2.0"/>
+      </padding>
+    </HBox>
+    <fx:include source="NotificationsVIEW.fxml" AnchorPane.rightAnchor="200.0"/>
+  </children>
+  <stylesheets>
+    <URL value="@../css/DefaultStyleSheet.css"/>
+  </stylesheets>
+</AnchorPane>

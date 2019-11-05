@@ -1,0 +1,404 @@
+* {
+  /*Colors*/
+  color-white: #F5F5F5;
+  color-grey: #333333;
+  color-yellow: #FFFF00;
+  color-blue: #448ccf;
+  color-red: #E32636;
+  label-huge: 56;
+  color-blue-light: #99bce0;
+
+  /*Effects*/
+  innershadow-default: innershadow(gaussian, black, 3, 0.4, 1, -1);
+}
+
+
+.default-background {
+  -fx-background-color: color-grey;
+  -fx-border-color: color-blue-light;
+}
+
+
+.minimize-exit-background {
+  -fx-background-color: color-white;
+  -fx-effect: innershadow-default;
+  -fx-background-radius: 0 0 0 4;
+}
+
+
+/*----------------------------------- Containers -----------------------------------*/
+
+
+.container-line-blue-light {
+  -fx-background-color: transparent;
+  -fx-border-color: color-blue-light;
+  -fx-border-width: 0px 0px 2px 0px;
+}
+
+
+.container-line-blue {
+  -fx-background-color: transparent;
+  -fx-border-color: color-blue;
+  -fx-border-width: 0px 0px 2px 0px;
+}
+
+
+.container-line-yellow {
+  -fx-background-color: transparent;
+  -fx-border-color: color-yellow;
+  -fx-border-width: 0px 0px 2px 0px;
+}
+
+/*----------------------------------- Text Fields -----------------------------------*/
+
+*.text-field {
+  -fx-text-fill: color-white;
+}
+
+.jfx-password-field {
+  -jfx-label-float: true;
+  -fx-font-family: "Eras Demi ITC";
+}
+
+.jfx-password-field .input-line, .jfx-password-field .input-focused-line, .jfx-text-field .input-line, .jfx-text-field .input-focused-line {
+  -fx-background-color: transparent;
+}
+
+.jfx-text-field {
+  -jfx-label-float: true;
+  -fx-font-family: "Eras Demi ITC";
+}
+
+.jfx-text-field-blue-light-yellow {
+  -jfx-focus-color: color-yellow;
+  -jfx-unfocus-color: color-blue-light;
+  -fx-prompt-text-fill: color-blue-light;
+}
+
+.jfx-text-field-prompt-text-blue-light {
+  -fx-prompt-text-fill: color-blue-light;
+}
+
+.jfx-text-field-white .text {
+  -fx-fill: color-white;
+}
+
+
+/*----------------------------------- BUTTONS -----------------------------------*/
+
+.jfx-button {
+  -fx-font-family: "Eras Demi ITC";
+}
+
+.button-white-border-red-hover {
+  -fx-background-color: transparent;
+  -fx-background-radius: 5px;
+  -fx-border-color: color-white;
+  -fx-border-radius: 5px;
+  -fx-border-width: 2px;
+  -fx-text-fill: color-white;
+  -fx-opacity: 0.6;
+}
+
+
+.button-white-border-red-hover:hover {
+  -fx-background-color: color-red;
+  -fx-text-fill: color-white;
+  -fx-border-color: color-red;
+  -fx-opacity: 1;
+}
+
+
+.button-rainbow {
+  -fx-background-color: transparent;
+  -fx-background-radius: 5px;
+  /*-fx-background-color: linear-gradient(to top right, rgba(67, 121, 168, 0.2), rgba(67, 121, 168, 0.4), rgba(67, 121, 168, 0.8));*/
+  -fx-border-color: linear-gradient(to top right, rgba(68, 140, 207, 1), rgba(255, 255, 0, 1) 70%, rgba(245, 245, 245, 0.4));
+  -fx-border-radius: 5px;
+  -fx-border-width: 2px;
+  -fx-text-fill: linear-gradient(to top right, rgba(68, 140, 207, 1), rgba(255, 255, 0, 1) 70%, rgba(255, 255, 0, 0.7) 90%);
+  -fx-font-size: 32;
+}
+
+.button-rainbow:hover {
+  -fx-background-color: linear-gradient(to top right, rgba(68, 140, 207, 1), rgba(255, 255, 0, 0.8) 70%, rgba(255, 255, 0, 0.2));
+  -fx-text-fill: color-white;
+}
+
+.button-filled-red {
+  -fx-background-color: transparent;
+  -fx-background-radius: 5px;
+  -fx-border-color: #E32636;
+  -fx-border-radius: 5px;
+  -fx-border-width: 2px;
+  -fx-text-fill: #E32636;
+}
+
+.button-filled-red:hover {
+  -fx-background-color: #E32636;
+  -fx-text-fill: whitesmoke;
+}
+
+
+/*----------------------------------- Glyph Icons -----------------------------------*/
+
+
+.glyph-icon-red {
+  -fx-fill: color-red;
+}
+
+.glyph-icon-blue-light {
+  -fx-fill: color-blue-light;
+}
+
+.glyph-icon-blue {
+  -fx-fill: color-blue;
+}
+
+.glyph-icon-yellow {
+  -fx-fill: color-yellow;
+}
+
+
+/*----------------------------------- Labels -----------------------------------*/
+
+.label {
+  -fx-font-family: "Eras Demi ITC";
+}
+
+.label-light {
+  -fx-font-family: "Eras Medium ITC";
+}
+
+.label-10 {
+  -fx-font-size: 10px;
+}
+
+.label-12 {
+  -fx-font-size: 12px;
+}
+
+.label-14 {
+  -fx-font-size: 14px;
+}
+
+.label-16 {
+  -fx-font-size: 16px;
+}
+
+.label-18 {
+  -fx-font-size: 18px;
+}
+
+.label-20 {
+  -fx-font-size: 20px;
+}
+
+.label-22 {
+  -fx-font-size: 22px;
+}
+
+.label-24 {
+  -fx-font-size: 24px;
+}
+
+.label-26 {
+  -fx-font-size: 26px;
+}
+
+.label-28 {
+  -fx-font-size: 28px;
+}
+
+.label-30 {
+  -fx-font-size: 30px;
+}
+
+.label-34 {
+  -fx-font-size: 34px;
+}
+
+.label-36 {
+  -fx-font-size: 36px;
+}
+
+.label-45 {
+  -fx-font-size: 45px;
+}
+
+.label-50 {
+  -fx-font-size: 50px;
+}
+
+.label-text-white .text {
+  -fx-fill: color-white;
+}
+
+.label-text-blue .text {
+  -fx-fill: color-blue;
+}
+
+.label-text-yellow .text {
+  -fx-fill: color-yellow;
+}
+
+.label-text-stroke-yellow .text {
+  -fx-stroke: color-yellow;
+  -fx-stroke-width: 0.8px;
+}
+
+
+/*----------------------------------- Progress Bar -----------------------------------*/
+
+
+.jfx-progress-bar > .bar {
+  -fx-background-color: color-yellow;
+}
+
+.jfx-progress-bar > .track {
+  -fx-background-color: color-grey;
+}
+
+
+.jfx-progress-bar-red > .bar {
+  -fx-background-color: color-red;
+}
+
+.jfx-progress-bar-red > .track {
+  -fx-background-color: color-grey;
+}
+
+
+/*.default-background {*/
+/*-fx-background-color: #333333;*/
+/*-fx-border-color: #99bce0;*/
+/*}*/
+
+/*.text-field-box {*/
+/*-fx-background-color: transparent;*/
+/*-fx-border-color: #99bce0;*/
+/*-fx-border-width: 0px 0px 1px 0px;*/
+/*}*/
+
+
+/*.jfx-text-field {*/
+/*-fx-prompt-text-fill: #B2B2B2;*/
+/*-fx-font-size: 16px;*/
+/*-fx-text-fill: yellow;*/
+
+/*}*/
+
+/*.jfx-text-field .input-line {*/
+/*visibility: false;*/
+/*}*/
+/*.jfx-text-field .input-focused-line {*/
+/*visibility: false;*/
+/*}*/
+
+
+/*.jfx-combo-box{*/
+/*-fx-background-color:  transparent;*/
+/*-fx-prompt-text-fill: #B2B2B2;*/
+/*-fx-font-size: 16px;*/
+/*-fx-font-family: "Eras Demi ITC";*/
+
+
+/*}*/
+
+/*.jfx-combo-box .text-field{*/
+/*-fx-background-color:  transparent;*/
+/*-fx-prompt-text-fill: #B2B2B2;*/
+
+/*}*/
+
+/*.jfx-combo-box .input-line {*/
+/*-fx-prompt-text-fill: #B2B2B2;*/
+/*-fx-font-size: 16px;*/
+
+/*visibility: false;*/
+/*}*/
+
+/*.jfx-combo-box .input-focused-line {*/
+/*-fx-prompt-text-fill: #99bce0;*/
+/*-fx-font-size: 16px;*/
+/*visibility: false;*/
+/*}*/
+
+/*.jfx-combo-box .list-cell .text{*/
+/*-fx-fill: white;*/
+/*-fx-text-origin: bottom;*/
+/*-fx-font-size: 16px;*/
+/*}*/
+
+/*.jfx-combo-box .list-cell{*/
+/*-fx-fill: white;*/
+/*-fx-font-size: 16px;*/
+
+/*-fx-padding: 0.3em 0em 0em 0.1em;*/
+/*}*/
+/*!*top, right, bottom, and left*!*/
+
+/*.jfx-combo-box .combo-box-popup .list-cell{*/
+/*-fx-background-color: #868686;*/
+/*-fx-background-insets: 0;*/
+/*-fx-padding: 0.4em 0.7em 0.4em 0.7em;*/
+/*}*/
+
+/*.jfx-combo-box .combo-box-popup .list-cell:hover{*/
+/*-fx-background-color: #99bce0;*/
+/*-fx-background-insets: 0;*/
+/*-fx-padding: 0.4em 0.7em 0.4em 0.7em;*/
+/*}*/
+
+/*.jfx-combo-box .combo-box-popup .list-cell:hover .text{*/
+/*-fx-fill:black;*/
+/*}*/
+
+/*.jfx-combo-box .combo-box-popup .list-view{*/
+/*-fx-background-color: #99bce0;*/
+/*-fx-background-insets: 0;*/
+/*}*/
+
+/*.jfx-combo-box .combo-box-popup .list-view:hover{*/
+/*-fx-background-color: yellow;*/
+/*-fx-background-insets: 0;*/
+/*}*/
+
+/*.jfx-combo-box .arrow {*/
+/*-fx-background-color: #99bce0;*/
+/*}*/
+
+/*.mylabel{*/
+/*-fx-text-fill:whitesmoke;*/
+/*-fx-font-size:16px;*/
+/*-fx-font-family: "Eras Demi ITC";*/
+/*}*/
+
+/*.my-yellow-label{*/
+/*-fx-text-fill:yellow;*/
+/*-fx-font-size:16px;*/
+/*-fx-font-family: "Eras Demi ITC";*/
+/*}*/
+
+/*.doIt-button {*/
+/*-fx-background-color: transparent;*/
+/*-fx-background-radius: 5px;*/
+/*-fx-border-color: #cccccc;*/
+/*-fx-border-radius: 5px;*/
+/*-fx-border-width: 2px;*/
+/*-fx-text-fill: whitesmoke;*/
+/*-fx-font-size:20px;*/
+/*-fx-font-family: "Eras Demi ITC";*/
+
+/*}*/
+
+/*.close-button{*/
+
+/*}*/
+
+/*.jfx-progress-bar > .bar {*/
+/*-fx-background-color: yellow;*/
+/*}*/
+/*.jfx-progress-bar > .track {*/
+/*-fx-background-color: #333333;*/
+/*}*/
