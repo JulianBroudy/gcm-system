@@ -1,4 +1,4 @@
 # GCM System
 
-#### [JavaDoc](https://julianbroudy.github.io/gcm-system/overview-summary.html)
+#### [JavaDoc](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
 
