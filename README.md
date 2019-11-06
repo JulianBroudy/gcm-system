@@ -1,6 +1,8 @@
 # GCM System
-## Client-Server JavaFX Application.
-#### [JavaDoc](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
+## Client-Server JavaFX Application - [JavaDoc](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html). 
+
+
+Please give the Gifs a moment to load (will run smoothly after 1 loop).
 
 ## Cities Editor
 ![Sample 1](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Cities%20Editor.gif)
