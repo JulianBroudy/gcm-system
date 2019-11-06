@@ -167,22 +167,36 @@ public class StageManager extends EnhancedFXMLControllersLinker {
     whenSwitchingToSignUp3.add(FXMLView.SIGN_UP_FORM_2);
     viewsToSkip.put(FXMLView.SIGN_UP_FORM_3, whenSwitchingToSignUp3);
 
-    final ArrayList<FXMLView> whenSwitchingToJustBrowseCatalog = new ArrayList<>();
-    whenSwitchingToJustBrowseCatalog.add(FXMLView.JUST_BROWSE_SIDE_PANE);
-    whenSwitchingToJustBrowseCatalog.add(FXMLView.WELCOME_SCREEN);
-    // whenSwitchingToJustBrowseCatalog.add(FXMLView.SIGN_UP_FORM_1);
-    // whenSwitchingToJustBrowseCatalog.add(FXMLView.SIGN_UP_FORM_2);
-    viewsToSkip.put(FXMLView.JUST_BROWSING, whenSwitchingToJustBrowseCatalog);
 
     final ArrayList<FXMLView> whenSwitchingToJustBrowseSidePane = new ArrayList<>();
-    whenSwitchingToJustBrowseSidePane.add(FXMLView.JUST_BROWSING);
-    whenSwitchingToJustBrowseCatalog.add(FXMLView.WELCOME_SCREEN);
+    whenSwitchingToJustBrowseSidePane.add(FXMLView.CUSTOMER_CATALOG_BROWSING);
+    whenSwitchingToJustBrowseSidePane.add(FXMLView.CUSTOMER_CITY_EXPLORER);
+    whenSwitchingToJustBrowseSidePane.add(FXMLView.WELCOME_SCREEN);
+    whenSwitchingToJustBrowseSidePane.add(FXMLView.MAIN_CONTAINER);
     // whenSwitchingToJustBrowseCatalog.add(FXMLView.SIGN_UP_FORM_1);
     // whenSwitchingToJustBrowseCatalog.add(FXMLView.SIGN_UP_FORM_2);
     viewsToSkip.put(FXMLView.JUST_BROWSE_SIDE_PANE, whenSwitchingToJustBrowseSidePane);
 
+    final ArrayList<FXMLView> whenSwitchingToCityExplorer = new ArrayList<>();
+    whenSwitchingToCityExplorer.add(FXMLView.CUSTOMER_CATALOG_BROWSING);
+    whenSwitchingToCityExplorer.add(FXMLView.JUST_BROWSE_SIDE_PANE);
+    whenSwitchingToCityExplorer.add(FXMLView.WELCOME_SCREEN);
+    whenSwitchingToCityExplorer.add(FXMLView.MAIN_CONTAINER);
+    viewsToSkip.put(FXMLView.CUSTOMER_CITY_EXPLORER, whenSwitchingToCityExplorer);
+
+    final ArrayList<FXMLView> whenSwitchingToCustomerCatalogBrowsing = new ArrayList<>();
+    whenSwitchingToCustomerCatalogBrowsing.add(FXMLView.CUSTOMER_CITY_EXPLORER);
+    whenSwitchingToCustomerCatalogBrowsing.add(FXMLView.JUST_BROWSE_SIDE_PANE);
+    whenSwitchingToCustomerCatalogBrowsing.add(FXMLView.WELCOME_SCREEN);
+    whenSwitchingToCustomerCatalogBrowsing.add(FXMLView.MAIN_CONTAINER);
+    viewsToSkip.put(FXMLView.CUSTOMER_CATALOG_BROWSING, whenSwitchingToCustomerCatalogBrowsing);
+
+    // whenSwitchingToJustBrowseCatalog.add(FXMLView.SIGN_UP_FORM_1);
+    // whenSwitchingToJustBrowseCatalog.add(FXMLView.SIGN_UP_FORM_2);
+
     final ArrayList<FXMLView> whenSwitchingToMainContainer = new ArrayList<>();
     // whenSwitchingToMainContainer.add(FXMLView.NOTIFOCATIONS?);
+    whenSwitchingToMainContainer.add(FXMLView.JUST_BROWSE_SIDE_PANE);
     viewsToSkip.put(FXMLView.MAIN_CONTAINER, whenSwitchingToMainContainer);
 
     final ArrayList<FXMLView> whenSwitchingToEmployeeViews = new ArrayList<>();
@@ -196,6 +210,11 @@ public class StageManager extends EnhancedFXMLControllersLinker {
     viewsToSkip.put(FXMLView.EMPLOYEE_MAPS_EDITOR, whenSwitchingToEmployeeViews);
     viewsToSkip.put(FXMLView.EMPLOYEE_REQUESTS_VIEWER, whenSwitchingToEmployeeViews);
     viewsToSkip.put(FXMLView.EMPLOYEE_CITY_EXPLORER, whenSwitchingToEmployeeViews);
+    //
+    // final ArrayList<FXMLView> whenSwitchingToJustBrowse = new ArrayList<>();
+    // whenSwitchingToJustBrowse.add(FXMLView.JUST_BROWSE_SIDE_PANE);
+    // viewsToSkip.put(FXMLView.EMPLOYEE_SIDE_PANE, whenSwitchingToEmployeeViews);
+
 
     /*
     final ArrayList<FXMLView> whenSwitchingToCustomerViews = new ArrayList<>();

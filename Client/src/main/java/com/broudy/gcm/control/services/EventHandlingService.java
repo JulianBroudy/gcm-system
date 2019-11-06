@@ -428,8 +428,7 @@ public class EventHandlingService {
           });
           break;
         }
-        case EMPLOYEE_WORKSPACE_FETCHED_ALL:
-        case EMPLOYEE_CITY_APPROVAL_REQUEST_FETCHED_ALL: {
+        case EMPLOYEE_WORKSPACE_FETCHED_ALL:{
           setOnSucceeded(succeeded -> {
             logger.trace("EMPLOYEE_WORKSPACE_FETCHED_ALL");
             citiesRepository.setEmployeesWorkspace(
@@ -446,6 +445,27 @@ public class EventHandlingService {
               hideProcessFlag = false;
             }
           });
+          break;
+        }
+        case EMPLOYEE_CITY_APPROVAL_REQUEST_FETCHED_ALL: {
+          if (sceneSwitcheroo.getCurrentlyVisibleView() == FXMLView.EMPLOYEE_REQUESTS_VIEWER) {
+            setOnSucceeded(succeeded -> {
+              logger.trace("EMPLOYEE_WORKSPACE_FETCHED_ALL");
+              citiesRepository.setEmployeesWorkspace(
+                  FXCollections.observableArrayList(serversResponse.getListOfDTOs()));
+              if (hideProcessFlag) {
+                CityDTO selectedCity = citiesRepository.getBean();
+                selectedCity.setState(com.broudy.gcm.entity.State.LOCKED);
+                citiesRepository.requestBeanReset();
+                citiesRepository.setBean(selectedCity);
+                final EmployeeMapsEditorController enhancedController = stageManager
+                    .getControllerFor(FXMLView.EMPLOYEE_MAPS_EDITOR);
+                enhancedController.finishedProcessing("Cancelled :)");
+                enhancedController.showMapComboBox();
+                hideProcessFlag = false;
+              }
+            });
+          }
           break;
         }
         case CITY_SAVED: {
@@ -571,6 +591,15 @@ public class EventHandlingService {
           });
           break;
         }
+        case PUSH_WORKSPACE:{
+          setOnSucceeded(succeeded->{
+          logger.trace("EMPLOYEE_WORKSPACE_FETCHED_ALL");
+          citiesRepository.getEmployeesWorkspace().clear();
+          citiesRepository.setEmployeesWorkspace(
+              FXCollections.observableArrayList(serversResponse.getListOfDTOs()));
+          });
+          break;
+        }
       }
     }
 
@@ -595,6 +624,7 @@ public class EventHandlingService {
               sceneSwitcheroo.loadView(FXMLView.EMPLOYEE_MAPS_EDITOR);
               break;
             }
+            case PUSH_WORKSPACE:
             case EMPLOYEE_WORKSPACE_FETCHED_ALL:
             case EMPLOYEE_CITY_APPROVAL_REQUEST_FETCHED_ALL: {
               serversResponse.getListOfDTOs()

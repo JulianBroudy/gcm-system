@@ -180,6 +180,18 @@ public class CitiesDAON extends AbsDAO<CityDTO> {
         break;
       }
 
+      case SPECIAL_GET_EMPLOYEE_EMAIL_BY_CITY:{
+        statement.setInt(1,cityRequest.getID());
+        try (ResultSet resultSet = statement.executeQuery()) {
+          if (resultSet.next()) {
+            serversResponse.setExtraParameters(resultSet.getInt(1), resultSet.getString(2));
+          }
+        } catch (SQLException sqlException) {
+          logger.error(sqlException);
+        }
+        break;
+      }
+
       default: {
         logger.trace(
             "Request " + clientsInquiry.getInquiry() + " was" + TextColors.RED.colorThis(" NOT ")

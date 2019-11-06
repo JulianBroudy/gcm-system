@@ -422,6 +422,11 @@ public class ClientsInquiry<DTO extends AbstractDTO> extends
       public String getQuery() {
         return "INSERT INTO `gcm-db`.`purchases` (`CustomerEmail`, `PurchaseDate`, `CityID`, `ExpirationDate`) VALUES (?, CURDATE(), ?, ADDDATE(CURDATE(), INTERVAL 6 MONTH));";
       }
+    }, SPECIAL_GET_EMPLOYEE_EMAIL_BY_CITY {
+      @Override
+      public String getQuery() {
+        return "SELECT e.EmployeeID, e.EmployeesEmail FROM employees AS e, employees_workspaces AS ew WHERE ew.CityID = ? AND ew.EmployeeID = e.EmployeeID;";
+      }
     };
 
     /**

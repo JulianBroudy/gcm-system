@@ -91,7 +91,7 @@ public class MainContainerController extends EnhancedFXMLController {
    */
   @Override
   public void initializeEnhancedController() {
-    activateController();
+    /*activateController();*/
   }
 
   /**

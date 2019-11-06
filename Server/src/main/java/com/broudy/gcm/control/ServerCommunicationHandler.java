@@ -11,6 +11,7 @@ import com.broudy.gcm.entity.ClientsInquiry.Inquiry;
 import com.broudy.gcm.entity.DTOType;
 import com.broudy.gcm.entity.ServersResponse;
 import com.broudy.gcm.entity.ServersResponse.Response;
+import com.broudy.gcm.entity.UserClassification;
 import com.broudy.gcm.entity.dtos.CityDTO;
 import com.broudy.gcm.entity.dtos.EmployeeDTO;
 import com.broudy.gcm.entity.dtos.UserDTO;
@@ -175,15 +176,68 @@ public class ServerCommunicationHandler implements Observer {
         }
 
         case CITY: {
-          // CitiesDAON usersDAO = new CitiesDAON();
-          serversResponse = new CitiesDAON().processInquiry(clientsInquiry);
-          if (serversResponse.getResponse() == Response.CITY_SAVED_AND_LOCKED) {
-            EmployeeDTO userInfo = (EmployeeDTO) connectionToClient.getInfo("UserINFO");
-            ClientsInquiry<CityDTO> saveToWorkspaceInquiry = ClientsInquiry.of(CityDTO.class)
-                .setExtraParameters(userInfo.getEmployeeID());
-            saveToWorkspaceInquiry.setTheDTO((CityDTO) serversResponse.getTheDTO());
-            saveToWorkspaceInquiry.setInquiry(Inquiry.CITY_LOCK_TO_EMPLOYEE);
-            new CitiesDAON().processInquiry(saveToWorkspaceInquiry);
+          if (clientsInquiry.getInquiry() == Inquiry.CITY_REQUEST_APPROVAL
+              || clientsInquiry.getInquiry() == Inquiry.CITY_CANCEL_APPROVAL_REQUEST) {
+            serversResponse = new CitiesDAON().processInquiry(clientsInquiry);
+            ClientsInquiry<CityDTO> cityInquiry = ClientsInquiry.of(CityDTO.class);
+            cityInquiry.setTheDTO((CityDTO) clientsInquiry.getTheDTO());
+            cityInquiry.setInquiry(Inquiry.EMPLOYEE_CITY_APPROVAL_REQUEST_FETCH_ALL);
+            ServersResponse<CityDTO> updatedApprovalRequestsResponse = new CitiesDAON()
+                .processInquiry(cityInquiry);
+            Thread[] clientThreadList = GCMServer.getInstance().getClientConnections();
+            for (int i = 0; i < clientThreadList.length; i++) {
+              if (clientThreadList[i] instanceof ConnectionToClient) {
+                final ConnectionToClient connection = (ConnectionToClient) clientThreadList[i];
+                final UserDTO userInfo = (UserDTO) connection.getInfo("UserINFO");
+                if (userInfo != null) {
+                  if (userInfo.getClassification() != UserClassification.CUSTOMER
+                      && userInfo.getClassification() != UserClassification.CONTENT_EDITOR) {
+                    send(updatedApprovalRequestsResponse, connection);
+                  }
+                }
+              }
+            }
+          } else {
+            // CitiesDAON usersDAO = new CitiesDAON();
+            serversResponse = new CitiesDAON().processInquiry(clientsInquiry);
+            if (serversResponse.getResponse() == Response.CITY_SAVED_AND_LOCKED) {
+              EmployeeDTO userInfo = (EmployeeDTO) connectionToClient.getInfo("UserINFO");
+              ClientsInquiry<CityDTO> saveToWorkspaceInquiry = ClientsInquiry.of(CityDTO.class)
+                  .setExtraParameters(userInfo.getEmployeeID());
+              saveToWorkspaceInquiry.setTheDTO((CityDTO) serversResponse.getTheDTO());
+              saveToWorkspaceInquiry.setInquiry(Inquiry.CITY_LOCK_TO_EMPLOYEE);
+              new CitiesDAON().processInquiry(saveToWorkspaceInquiry);
+            } else if (serversResponse.getResponse() == Response.CITY_APPROVED_APPROVAL_REQUEST
+                || serversResponse.getResponse() == Response.CITY_REJECTED_APPROVAL_REQUEST) {
+              ClientsInquiry<CityDTO> cityInquiry = ClientsInquiry.of(CityDTO.class);
+              cityInquiry.setTheDTO((CityDTO) clientsInquiry.getTheDTO());
+              cityInquiry.setInquiry(Inquiry.SPECIAL_GET_EMPLOYEE_EMAIL_BY_CITY);
+              ServersResponse<CityDTO> employeeEmailResponse = new CitiesDAON()
+                  .processInquiry(cityInquiry);
+              Thread[] clientThreadList = GCMServer.getInstance().getClientConnections();
+              for (int i = 0; i < clientThreadList.length; i++) {
+                if (clientThreadList[i] instanceof ConnectionToClient) {
+                  final ConnectionToClient connection = (ConnectionToClient) clientThreadList[i];
+                  final UserDTO userInfo = (UserDTO) connection.getInfo("UserINFO");
+                  if (userInfo != null) {
+                    if (userInfo.getClassification() != UserClassification.CUSTOMER
+                        && ((EmployeeDTO) userInfo).getEmployeeID() == (int) employeeEmailResponse
+                        .getExtraParameterAt(1)) {
+                      ClientsInquiry<CityDTO> workspaceFetchingInquiry = ClientsInquiry
+                          .of(CityDTO.class);
+                      workspaceFetchingInquiry.setTheDTO(new CityDTO());
+                      workspaceFetchingInquiry.setInquiry(Inquiry.EMPLOYEE_WORKSPACE_FETCH_ALL);
+                      workspaceFetchingInquiry
+                          .setExtraParameters((int)employeeEmailResponse.getExtraParameterAt(1));
+                      ServersResponse<CityDTO> pushWorkspace = new CitiesDAON().processInquiry(workspaceFetchingInquiry);
+                      pushWorkspace.setResponse(Response.PUSH_WORKSPACE);
+                      send(pushWorkspace,connection);
+                      break;
+                    }
+                  }
+                }
+              }
+            }
           }
           break;
         }

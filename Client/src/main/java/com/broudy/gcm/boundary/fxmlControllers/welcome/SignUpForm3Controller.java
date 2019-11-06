@@ -6,6 +6,7 @@ import com.broudy.gcm.boundary.enhanced.controls.FillingForm;
 import com.broudy.gcm.boundary.enhanced.fxmlrelated.EnhancedFXMLController;
 import com.broudy.gcm.control.StageManager;
 import com.broudy.gcm.control.repos.CreditCardsRepository;
+import com.broudy.gcm.control.repos.UsersRepository;
 import com.broudy.gcm.control.services.renderings.RenderingsStyler;
 import com.google.inject.Inject;
 import com.jfoenix.controls.JFXButton;
@@ -42,6 +43,7 @@ public class SignUpForm3Controller extends EnhancedFXMLController {
   private final String EMPTY_AND_UNFOCUSED_COLOR = "grey-light";
 
   /* Guice injected fields */
+  private final UsersRepository usersRepository;
   private final CreditCardsRepository creditCardsRepository;
   @Inject
   private StageManager stageManager;
@@ -91,7 +93,8 @@ public class SignUpForm3Controller extends EnhancedFXMLController {
   private JFXButton signUpBTN;
 
   @Inject
-  public SignUpForm3Controller(CreditCardsRepository creditCardsRepository) {
+  public SignUpForm3Controller(UsersRepository usersRepository, CreditCardsRepository creditCardsRepository) {
+    this.usersRepository = usersRepository;
     this.creditCardsRepository = creditCardsRepository;
   }
 
@@ -249,7 +252,8 @@ public class SignUpForm3Controller extends EnhancedFXMLController {
         shakeNode(expirationDP.getValue().isBefore(LocalDate.now()), expirationDP);
       } else {
         //everything is valid send request
-        creditCardsRepository.createCC();
+        // creditCardsRepository.createCC();
+        usersRepository.requestUserSignUp();
       }
     });
 

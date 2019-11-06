@@ -70,11 +70,10 @@ public class CustomerCatalogBrowserController<RIS extends Renderable & IStatable
   protected void activateController() {
     sceneSwitcheroo.loadDrawerView(FXMLView.CUSTOMER_CITY_EXPLORER);
 
-    purchasesRepository.requestCustomerActivePurchases();
-
     searchByCB.getItems().addAll("City", "Site", "Description");
     searchCTF.disableProperty().bind(searchByCB.valueProperty().isNull());
     activateListeners();
+    purchasesRepository.requestCustomerActivePurchases();
 
     citiesRepository.requestAllCities();
   }

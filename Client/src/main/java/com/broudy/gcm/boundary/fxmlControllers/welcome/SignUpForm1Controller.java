@@ -116,7 +116,10 @@ public class SignUpForm1Controller extends EnhancedFXMLController {
    */
   @Override
   protected void deactivateController() {
-
+    usersRepository.getSuperBean().
+        unBindBidirectional("email", emailTF.textProperty());
+    usersRepository.getSuperBean().
+        unBindBidirectional("password", passwordPF.textProperty());
   }
 
 

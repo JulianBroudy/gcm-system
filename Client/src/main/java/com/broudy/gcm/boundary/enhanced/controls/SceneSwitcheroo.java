@@ -5,6 +5,7 @@ import com.broudy.gcm.boundary.fxmlControllers.MainContainerController;
 import com.broudy.gcm.control.StageManager;
 import com.google.inject.Inject;
 import com.jfoenix.controls.JFXDrawer;
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.geometry.Pos;
@@ -54,7 +55,7 @@ public class SceneSwitcheroo extends AnchorPane {
     if (currentlyVisibleView != fxmlView) {
       currentlyVisibleView = fxmlView;
       stageManager.switchSubScene(fxmlView, this);
-      windowTitle.set(fxmlView.getTitle());
+      Platform.runLater(() -> windowTitle.set(fxmlView.getTitle()));
       if (drawer.isOpened()) {
         hideDrawerView();
       }
@@ -133,4 +134,12 @@ public class SceneSwitcheroo extends AnchorPane {
   }
 
 
+  /**
+   * Gets the currentlyVisibleView.
+   *
+   * @return currentlyVisibleView's value.
+   */
+  public FXMLView getCurrentlyVisibleView() {
+    return currentlyVisibleView;
+  }
 }

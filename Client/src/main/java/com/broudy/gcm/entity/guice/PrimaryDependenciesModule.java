@@ -41,6 +41,14 @@ public class PrimaryDependenciesModule extends AbstractModule {
     bind(Stage.class).toInstance(primaryStage);
     bind(StageManager.class).in(Singleton.class);
 
+
+    // bind(UsersRepository.class).asEagerSingleton();
+    // bind(CitiesRepository.class).asEagerSingleton();
+    // bind(MapsRepository.class).asEagerSingleton();
+    // bind(PurchasesRepository.class).asEagerSingleton();
+    // bind(MapsRepository.class).in(Singleton.class);
+    // bind(PurchasesRepository.class).in(Singleton.class);
+
     bind(UsersRepository.class).in(Singleton.class);
     bind(CitiesRepository.class).in(Singleton.class);
     bind(MapsRepository.class).in(Singleton.class);

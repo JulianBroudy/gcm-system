@@ -3,8 +3,10 @@ package com.broudy.gcm.entity.guice;
 import com.broudy.gcm.boundary.enhanced.controls.FillingForm;
 import com.broudy.gcm.boundary.enhanced.controls.SceneSwitcheroo;
 import com.broudy.gcm.boundary.fxmlControllers.ClientInitializingController;
+import com.broudy.gcm.boundary.fxmlControllers.JustBrowseSidePaneController;
 import com.broudy.gcm.boundary.fxmlControllers.MainContainerController;
 import com.broudy.gcm.boundary.fxmlControllers.customer.CustomerCatalogBrowserController;
+import com.broudy.gcm.boundary.fxmlControllers.customer.CustomerCityExplorerController;
 import com.broudy.gcm.boundary.fxmlControllers.customer.CustomerSidePaneController;
 import com.broudy.gcm.boundary.fxmlControllers.employee.EmployeeCitiesEditorController;
 import com.broudy.gcm.boundary.fxmlControllers.employee.EmployeeCityExplorerController;
@@ -41,37 +43,6 @@ public class EnhancedFXMLLoaderDependenciesModule extends AbstractModule {
   @Override
   protected void configure() {
     logger.traceEntry("configure()");
-
-    // MapBinder<FXMLView, EnhancedFXMLController> viewToControllerBinder = MapBinder
-    //     .newMapBinder(binder(), FXMLView.class, EnhancedFXMLController.class);
-    //
-    // viewToControllerBinder.addBinding(FXMLView.CLIENT_STARTUP)
-    //     .to(ClientInitializingController.class).in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.WELCOME_SCREEN).to(WelcomeScreenController.class)
-    //     .in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.SIGN_IN_FORM).to(SignInFormController.class)
-    //     .in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.SIGN_UP_FORM_1).to(SignUpForm1Controller.class)
-    //     .in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.SIGN_UP_FORM_2).to(SignUpForm2Controller.class)
-    //     .in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.SIGN_UP_FORM_3).to(SignUpForm3Controller.class)
-    //     .in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.MAIN_CONTAINER).to(MainContainerController.class)
-    //     .in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.EMPLOYEE_SIDE_PANE)
-    //     .to(EmployeeSidePaneController.class).in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.EMPLOYEE_MY_ACCOUNT)
-    //     .to(EmployeeMyAccountController.class).in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.EMPLOYEE_MY_WORKSPACE)
-    //     .to(EmployeeMyWorkspaceController.class).in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.EMPLOYEE_CITIES_EDITOR)
-    //     .to(EmployeeCitiesEditorController.class).in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.EMPLOYEE_MAPS_EDITOR)
-    //     .to(EmployeeMapsEditorController.class).in(Singleton.class);
-    // viewToControllerBinder.addBinding(FXMLView.EMPLOYEE_REQUESTS_VIEWER)
-    //     .to(EmployeeRequestsViewerController.class).in(Singleton.class);
-
     bind(ClientInitializingController.class).asEagerSingleton();
     bind(WelcomeScreenController.class).asEagerSingleton();/*in(Singleton.class)*/
     bind(SignInFormController.class).asEagerSingleton();
@@ -79,6 +50,14 @@ public class EnhancedFXMLLoaderDependenciesModule extends AbstractModule {
     bind(SignUpForm2Controller.class).asEagerSingleton();
     bind(SignUpForm3Controller.class).asEagerSingleton();
     bind(MainContainerController.class).asEagerSingleton();/*.in(Singleton.class);*/
+
+    bind(JustBrowseSidePaneController.class).in(Singleton.class);
+
+    bind(CustomerSidePaneController.class).in(Singleton.class);
+    bind(CustomerCatalogBrowserController.class).in(Singleton.class);
+    bind(CustomerCityExplorerController.class).in(Singleton.class);
+
+    bind(EmployeeMyAccountController.class).in(Singleton.class);
     bind(EmployeeMyAccountController.class).in(Singleton.class);
     bind(EmployeeMyWorkspaceController.class).in(Singleton.class);
     bind(EmployeeCitiesEditorController.class).in(Singleton.class);
@@ -89,9 +68,6 @@ public class EnhancedFXMLLoaderDependenciesModule extends AbstractModule {
 
     bind(FillingForm.class).asEagerSingleton();
     bind(SceneSwitcheroo.class).in(Singleton.class);
-
-    bind(CustomerSidePaneController.class).in(Singleton.class);
-    bind(CustomerCatalogBrowserController.class).in(Singleton.class);
 
     bind(MapViewRenderingsService.class).in(Singleton.class);
     bind(CityRenderingsService.class).in(Singleton.class);

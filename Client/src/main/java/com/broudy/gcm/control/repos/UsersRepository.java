@@ -3,6 +3,7 @@ package com.broudy.gcm.control.repos;
 import com.broudy.gcm.control.GCMClient;
 import com.broudy.gcm.entity.ClientsInquiry;
 import com.broudy.gcm.entity.ClientsInquiry.Inquiry;
+import com.broudy.gcm.entity.UserClassification;
 import com.broudy.gcm.entity.dtos.UserDTO;
 import com.broudy.utils.TextColors;
 import com.google.inject.Inject;
@@ -47,6 +48,7 @@ public class UsersRepository extends BeanRepository<UserDTO> {
     DEFAULT_USER.setLastName("");
     DEFAULT_USER.setFirstName("");
     DEFAULT_USER.setUsername("");
+    DEFAULT_USER.setClassification(UserClassification.CUSTOMER);
     setBean(DEFAULT_USER);
   }
 

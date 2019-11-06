@@ -56,7 +56,7 @@ import org.controlsfx.control.CheckTreeView;
 public class CustomerCityExplorerController<RIS extends Renderable & IStatable> extends
     EnhancedFXMLController {
 
-  private final static Logger logger = LogManager.getLogger(CustomerSidePaneController.class);
+  private final static Logger logger = LogManager.getLogger(CustomerCityExplorerController.class);
 
   private final Coordinate ISRAEL_CENTER = new Coordinate(31.494261815532752, 35.1947021484375);
   private final MapsRepository mapsRepository;
