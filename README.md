@@ -16,10 +16,10 @@ Please give the Gifs a moment to load (will run smoothly after 1 loop).
 ## Cities Editor
 ![Sample 1](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Cities%20Editor.gif)
 
-## Subscription & Download Processes
+## Search Engine, Subscription & Download Processes
 ![Sample 7](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/SubscribeAndDownload%20Sample.gif)
 
-## Unregistered Customer
+## Search Engine of an Unregistered Customer
 ![Sample 7](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Just%20Browse%20Sample.gif)
 
 ## Sign Up Process
