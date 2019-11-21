@@ -1,5 +1,5 @@
 # GCM System
-## Client-Server JavaFX Application - [JavaDoc](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html). 
+## A Scalabale-ish Multi-Threaded JavaFX Maps Store Application Using TCP/IP Client-Server Communication - [JavaDoc](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html). 
 
 
 Please give the Gifs a moment to load (will run smoothly after 1 loop).
