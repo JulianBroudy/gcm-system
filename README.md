@@ -53,6 +53,7 @@ A multi-threaded full-stack scalabale-ish JavaFX UX focused TCP/IP Client-Server
 
 ## Samples!
 #### Please give the Gifs a moment to properly load.
+<br>
 
 ### Maps Editor - Tours Editing
 ![Sample 3](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Map%20Editor%20-%20tours.gif)
