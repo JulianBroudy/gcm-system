@@ -8,9 +8,10 @@
 <br>
 
 ## Current Features 
-#### GCM System provides services not only to the company's employees, but to its customers as well.<br>
-[![Samples](https://img.shields.io/badge/%20%20SKIP%20%20-Scroll%20Down%20to%20Samples!-brightgreen?style=flat)](https://github.com/JulianBroudy/gcm-system#samples)<br>
+#### GCM System provides services not only to the company's employees, but to its customers as well.
+[![Samples](https://img.shields.io/badge/%20%20SKIP%20%20-Scroll%20Down%20to%20Samples!-brightgreen?style=flat)](https://github.com/JulianBroudy/gcm-system#samples)<br><br>
 
+### Employees:
 **Employees - *with various ranks* - can:**
 - Add a city to their workspace. <br>Which renders the city unaccessible to the rest of the employees until it is released or discarded.
 - Create new cities.
@@ -27,6 +28,7 @@
 - Exit or log out.
 <br>
 
+### Customers:
 **Unregistered customers can:**
 - Sign up.
 
