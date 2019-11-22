@@ -4,9 +4,11 @@ A multi-threaded full-stack scalabale-ish JavaFX UX focused TCP/IP Client-Server
 
 [![JavaDoc](https://img.shields.io/badge/info-JavaDoc-blue)](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
 
+
 <br>
 
-## WHAT?
+## WHAT? [![Samples](https://img.shields.io/badge/%20%20OR%20%20-Jump%20to%20Samples!-brightgreen?style=for-the-badge)](https://github.com/JulianBroudy/gcm-system#samples)
+
 #### GCM System provides services not only to the company's employees, but to its customers as well.
 
 **Employees - *with various ranks* - can:**
