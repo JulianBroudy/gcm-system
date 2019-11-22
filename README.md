@@ -4,9 +4,12 @@ A multi-threaded full-stack scalabale-ish JavaFX UX focused TCP/IP Client-Server
 
 [![JavaDoc](https://img.shields.io/badge/info-JavaDoc-blue)](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
 
-### GCM System provides services not only to the company's employees, but to its customers as well.
+<br>
 
-**Employees - with various ranks - can:**
+## WHAT?
+#### GCM System provides services not only to the company's employees, but to its customers as well.
+
+**Employees - *with various ranks* - can:**
 - Add a city to their workspace. <br>Which renders the city unaccessible to the rest of the employees until it is released or discarded.
 - Create new cities.
 - Attach and/or remove cities' maps.
@@ -48,25 +51,50 @@ A multi-threaded full-stack scalabale-ish JavaFX UX focused TCP/IP Client-Server
 
 <br><br>
 
+## Samples!
 #### Please give the Gifs a moment to properly load.
 
-## Maps Editor - Tours Editing
+### Maps Editor - Tours Editing
 ![Sample 3](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Map%20Editor%20-%20tours.gif)
 
-## Maps Editor - Sites Editing
+<br>
+
+### Maps Editor - Sites Editing
 ![Sample 2](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Map%20Editor%20-%20sites.gif)
 
-## City Release Process
+<br>
+
+### City Release Process
 ![Sample 5](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/City%20Release%20Requests.gif)
 
-## Cities Editor
+<br>
+
+### Cities Editor
 ![Sample 1](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Cities%20Editor.gif)
 
-## Search Engine, Subscription & Download Processes
+<br>
+
+### Search Engine, Subscription & Download Processes
 ![Sample 7](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/SubscribeAndDownload%20Sample.gif)
 
-## Search Engine of an Unregistered Customer
+<br>
+
+### Search Engine of an Unregistered Customer
 ![Sample 7](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Just%20Browse%20Sample.gif)
 
-## Sign Up Process
+<br>
+
+### Sign Up Process
 ![Sample 6](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Sign%20Up%20Sample.gif)
+
+<br><br>
+
+## Built With
+* [OCSF](http://www.site.uottawa.ca/school/research/lloseng/supportMaterial/ocsf/ocsf.html) - The client-server framework used
+* [MapJFX](https://github.com/sothawo/mapjfx/) - The map library that this app wouldn't be possible without!
+* [JFoenix](http://www.jfoenix.com/) - GUI library
+* [ControlsFX](https://github.com/controlsfx/controlsfx/) - GUI library
+* [FontAwesomeFX](https://bintray.com/jerady/maven/FontAwesomeFX/) - Icons library
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [Guice](https://github.com/google/guice/) - Used to improve overall performance and introduce a centralized class responsible for scene switching
+
