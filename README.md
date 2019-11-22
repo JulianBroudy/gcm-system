@@ -1,9 +1,8 @@
 # GCM System - 2 in 1 - A Maps Editor & Store 
 
-[![JavaDoc](https://img.shields.io/badge/info-JavaDoc-blue)](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
-
 A multi-threaded full-stack scalabale-ish JavaFX UX focused TCP/IP Client-Server communication adhering to the 3-tier client-server architicture as well as the Entity-Control-Business architictural pattern implementing OCSF.
 
+[![JavaDoc](https://img.shields.io/badge/info-JavaDoc-blue)](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
 
 #### GCM System provides services not only to the company's employees, but to its customers as well.
 
