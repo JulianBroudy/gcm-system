@@ -2,7 +2,7 @@
 
 **A multi-threaded full-stack scalabale-ish JavaFX UX focused TCP/IP Client-Server communication adhering to the 3-tier client-server architicture as well as the Entity-Control-Business architictural pattern implementing OCSF.**
 
-[![JavaDoc](https://img.shields.io/badge/info-JavaDoc-blue)](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
+[![JavaDoc](https://img.shields.io/badge/info-JavaDoc-informational)](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
 
 
 <br>
@@ -54,8 +54,7 @@
 <br><br>
 
 ## Samples!
-#### Please give the Gifs a moment to properly load.
-![WAIT](https://img.shields.io/badge/!!!-Please%20give%20the%20Gifs%20a%20moment%20to%20properly%20load.-grey?style=flat&labelColor=bf0f1b)
+[![WAIT](https://img.shields.io/badge/!!!-Please%20give%20the%20Gifs%20a%20moment%20to%20properly%20load.-grey?style=flat&labelColor=bf0f1b)]()
 
 
 <br>
