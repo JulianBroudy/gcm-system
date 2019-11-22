@@ -1,7 +1,8 @@
-# GCM System
-## A Scalabale-ish Maps Store [![JavaDoc](https://img.shields.io/badge/info-JavaDoc-blue)](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
+# GCM System - A Scalabale-ish Maps Store 
+[![JavaDoc](https://img.shields.io/badge/info-JavaDoc-blue)](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
+<br><br>
 
-Please give the Gifs a moment to properly load.
+![Note](https://img.shields.io/badge/-!-red) Please give the Gifs a moment to properly load.
 
 ## Maps Editor - Tours Editing
 ![Sample 3](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Map%20Editor%20-%20tours.gif)
