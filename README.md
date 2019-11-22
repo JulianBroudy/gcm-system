@@ -7,7 +7,7 @@
 
 <br>
 
-## WHAT? [![Samples](https://img.shields.io/badge/%20%20OR%20%20-Jump%20to%20Samples!-brightgreen?style=flat)](https://github.com/JulianBroudy/gcm-system#samples)
+## WHAT? [![Samples](https://img.shields.io/badge/%20%20OR%20%20-Click%20to%20Jump%20to%20Samples!-brightgreen?style=flat)](https://github.com/JulianBroudy/gcm-system#samples)
 
 #### GCM System provides services not only to the company's employees, but to its customers as well.
 
