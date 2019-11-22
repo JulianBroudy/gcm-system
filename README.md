@@ -57,7 +57,6 @@
 [![WAIT](https://img.shields.io/badge/!!!-Please%20give%20the%20Gifs%20a%20moment%20to%20properly%20load.-grey?style=flat&labelColor=bf0f1b)](https://github.com/JulianBroudy/gcm-system/blob/master/README.md#samples)
 
 
-<br>
 
 ### Maps Editor - Tours Editing
 ![Sample 3](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Map%20Editor%20-%20tours.gif)
@@ -92,7 +91,7 @@
 ### Sign Up Process
 ![Sample 6](https://github.com/JulianBroudy/gcm-system/blob/master/Especially%20For%20You/Sign%20Up%20Sample.gif)
 
-<br><br>
+<br>
 
 ## Built With
 * [OCSF](http://www.site.uottawa.ca/school/research/lloseng/supportMaterial/ocsf/ocsf.html) - The client-server framework used
@@ -103,11 +102,13 @@
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Guice](https://github.com/google/guice/) - Used to improve overall performance and introduce a centralized class responsible for scene switching
 
+<br>
 
 ## Authors
 
 * **[Julian Broudy](https://github.com/JulianBroudy)**
 
+<br>
 
 ## Acknowledgments
 
