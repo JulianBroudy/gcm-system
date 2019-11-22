@@ -1,4 +1,4 @@
-# GCM System - 2 in 1 - A Maps Editor & Store 
+# GCM System - A Maps Editor & Store 
 
 **A multi-threaded full-stack scalabale-ish JavaFX UX focused TCP/IP Client-Server communication adhering to the 3-tier client-server architicture as well as the Entity-Control-Business architictural pattern implementing OCSF.**
 
