@@ -4,7 +4,7 @@ A multi-threaded full-stack scalabale-ish JavaFX UX focused TCP/IP Client-Server
 
 [![JavaDoc](https://img.shields.io/badge/info-JavaDoc-blue)](https://julianbroudy.github.io/gcm-system/index.html?overview-summary.html)
 
-#### GCM System provides services not only to the company's employees, but to its customers as well.
+### GCM System provides services not only to the company's employees, but to its customers as well.
 
 **Employees - with various ranks - can:**
 - Add a city to their workspace. <br>Which renders the city unaccessible to the rest of the employees until it is released or discarded.
