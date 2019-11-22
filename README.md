@@ -54,7 +54,7 @@
 <br><br>
 
 ## Samples!
-[![WAIT](https://img.shields.io/badge/!!!-Please%20give%20the%20Gifs%20a%20moment%20to%20properly%20load.-grey?style=flat&labelColor=bf0f1b)]()
+[![WAIT](https://img.shields.io/badge/!!!-Please%20give%20the%20Gifs%20a%20moment%20to%20properly%20load.-grey?style=flat&labelColor=bf0f1b)](https://github.com/JulianBroudy/gcm-system/blob/master/README.md#samples)
 
 
 <br>
