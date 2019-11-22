@@ -7,8 +7,8 @@
 
 <br>
 
-## WHAT? [![Samples](https://img.shields.io/badge/%20%20OR%20%20-Click%20to%20Jump%20to%20Samples!-brightgreen?style=flat)](https://github.com/JulianBroudy/gcm-system#samples)
-
+## Current Features 
+[![Samples](https://img.shields.io/badge/%20%20OR%20%20-Click%20to%20Scroll%20Down%20to%20Samples!-brightgreen?style=flat)](https://github.com/JulianBroudy/gcm-system#samples)
 #### GCM System provides services not only to the company's employees, but to its customers as well.
 
 **Employees - *with various ranks* - can:**
@@ -100,4 +100,16 @@
 * [FontAwesomeFX](https://bintray.com/jerady/maven/FontAwesomeFX/) - Icons library
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Guice](https://github.com/google/guice/) - Used to improve overall performance and introduce a centralized class responsible for scene switching
+
+
+## Authors
+
+* **[Julian Broudy](https://github.com/JulianBroudy)**
+
+
+## Acknowledgments
+
+* **[MVP Java](https://github.com/mvpjava)**
+
+
 
