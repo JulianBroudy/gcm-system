@@ -1,4 +1,4 @@
-# GCM System - A Maps Editor & Store 
+# GCM System - Maps e-Commerce Platform with Built-in CRM Features
 
 **A multi-threaded full-stack scalabale-ish JavaFX UX focused TCP/IP Client-Server communication adhering to the 3-tier client-server architicture as well as the Entity-Control-Business architictural pattern implementing OCSF.**
 
